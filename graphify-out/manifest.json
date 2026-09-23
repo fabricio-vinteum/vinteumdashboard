@@ -1,0 +1,137 @@
+{
+  ".oxlintrc.json": {
+    "mtime": 1790193937.926393,
+    "ast_hash": "5e6e3cea3e89137071c142dd7835b0ef",
+    "semantic_hash": "5e6e3cea3e89137071c142dd7835b0ef"
+  },
+  "package.json": {
+    "mtime": 1790193965.4619977,
+    "ast_hash": "1b73808aee88ba0597b2241a82cbaa0e",
+    "semantic_hash": "1b73808aee88ba0597b2241a82cbaa0e"
+  },
+  "src/App.jsx": {
+    "mtime": 1790195970.3177612,
+    "ast_hash": "eed8bc1ac49e784bcd02043970706e10",
+    "semantic_hash": "eed8bc1ac49e784bcd02043970706e10"
+  },
+  "src/components/FunnelChart.jsx": {
+    "mtime": 1790194124.720129,
+    "ast_hash": "d3ad6ecb4984716c9eb4968e27733e3d",
+    "semantic_hash": "d3ad6ecb4984716c9eb4968e27733e3d"
+  },
+  "src/components/Header.jsx": {
+    "mtime": 1790195995.1761549,
+    "ast_hash": "7c3c8b1a7ef980343be64c046c5d71fd",
+    "semantic_hash": "7c3c8b1a7ef980343be64c046c5d71fd"
+  },
+  "src/components/MetricCard.jsx": {
+    "mtime": 1790195760.0736134,
+    "ast_hash": "8d7e1dbd79aeb1a557483999e4bf06a4",
+    "semantic_hash": "8d7e1dbd79aeb1a557483999e4bf06a4"
+  },
+  "src/components/Sidebar.jsx": {
+    "mtime": 1790195711.4082048,
+    "ast_hash": "1a643f31e1346ef3594c6cb99edc39db",
+    "semantic_hash": "1a643f31e1346ef3594c6cb99edc39db"
+  },
+  "src/main.jsx": {
+    "mtime": 1790193937.939404,
+    "ast_hash": "e13723e2574429d9a6d849727e3ff695",
+    "semantic_hash": "e13723e2574429d9a6d849727e3ff695"
+  },
+  "src/services/dataContext.jsx": {
+    "mtime": 1790195122.6592448,
+    "ast_hash": "8ac9d936b26c20ce5fa1ee33da7e7990",
+    "semantic_hash": "8ac9d936b26c20ce5fa1ee33da7e7990"
+  },
+  "src/services/sheetsClient.js": {
+    "mtime": 1790195078.24035,
+    "ast_hash": "bf2b00339a525435966d2aa4523415cc",
+    "semantic_hash": "bf2b00339a525435966d2aa4523415cc"
+  },
+  "src/services/sheetsParser.js": {
+    "mtime": 1790195111.3865275,
+    "ast_hash": "7534c76ebb0b235a1cb5b22d95767b27",
+    "semantic_hash": "7534c76ebb0b235a1cb5b22d95767b27"
+  },
+  "src/views/OverviewView.jsx": {
+    "mtime": 1790195378.212848,
+    "ast_hash": "541c339f0831fcd14f38a7b7f0039aaf",
+    "semantic_hash": "541c339f0831fcd14f38a7b7f0039aaf"
+  },
+  "vite.config.js": {
+    "mtime": 1790193976.458145,
+    "ast_hash": "a5d6115a66442ea07d01dd527b73a9c9",
+    "semantic_hash": "a5d6115a66442ea07d01dd527b73a9c9"
+  },
+  "scratch/test_dashboard_parse.py": {
+    "mtime": 1790195055.4978194,
+    "ast_hash": "879268466584aa0f9b3f49c156a08dfe",
+    "semantic_hash": "879268466584aa0f9b3f49c156a08dfe"
+  },
+  "scratch/test_full_parser.py": {
+    "mtime": 1790195090.2474294,
+    "ast_hash": "b8d3ad0347953004850b000f8e9f334c",
+    "semantic_hash": "b8d3ad0347953004850b000f8e9f334c"
+  },
+  "scratch/verify_columns.py": {
+    "mtime": 1790195032.0329514,
+    "ast_hash": "34099b0fbdeb9d03e74b085fa29a84ee",
+    "semantic_hash": "34099b0fbdeb9d03e74b085fa29a84ee"
+  },
+  "src/views/FunnelView.jsx": {
+    "mtime": 1790195179.540676,
+    "ast_hash": "6a7e764cac9a32d11c1de2d1f8c49973",
+    "semantic_hash": "6a7e764cac9a32d11c1de2d1f8c49973"
+  },
+  "src/views/MatrixView.jsx": {
+    "mtime": 1790195217.037746,
+    "ast_hash": "566dae32ad84b1fdad141a391bf411c6",
+    "semantic_hash": "566dae32ad84b1fdad141a391bf411c6"
+  },
+  "src/views/RetentionView.jsx": {
+    "mtime": 1790195204.7272012,
+    "ast_hash": "90f47b779df7a531418b56537e6be60b",
+    "semantic_hash": "90f47b779df7a531418b56537e6be60b"
+  },
+  "src/views/RevenueView.jsx": {
+    "mtime": 1790195193.3456197,
+    "ast_hash": "065faafe66abbf883ff2a2cdcc6e8992",
+    "semantic_hash": "065faafe66abbf883ff2a2cdcc6e8992"
+  },
+  "src/components/ComparisonSection.jsx": {
+    "mtime": 1790195350.302157,
+    "ast_hash": "6a44b9e4ff99dc38019116adaeeba9dd",
+    "semantic_hash": "6a44b9e4ff99dc38019116adaeeba9dd"
+  },
+  "scratch/download_logo.py": {
+    "mtime": 1790195599.6844547,
+    "ast_hash": "97f4957ace092cd2b5a678bb54aed19b",
+    "semantic_hash": "97f4957ace092cd2b5a678bb54aed19b"
+  },
+  "scratch/download_wordmark.py": {
+    "mtime": 1790195627.117507,
+    "ast_hash": "46fbe6584da975cda43eec3e4f29737a",
+    "semantic_hash": "46fbe6584da975cda43eec3e4f29737a"
+  },
+  "scratch/inspect_vinteum_brand.py": {
+    "mtime": 1790195576.9391758,
+    "ast_hash": "f92c170e21957feb1ba1ebddb4fb9920",
+    "semantic_hash": "f92c170e21957feb1ba1ebddb4fb9920"
+  },
+  "generate-hash.js": {
+    "mtime": 1790195865.778015,
+    "ast_hash": "29a0b4295121d9e3b2f6821d919009f3",
+    "semantic_hash": "29a0b4295121d9e3b2f6821d919009f3"
+  },
+  "src/components/LoginModal.jsx": {
+    "mtime": 1790195961.2701526,
+    "ast_hash": "71312001a5bdc45f90afa224d1cbc568",
+    "semantic_hash": "71312001a5bdc45f90afa224d1cbc568"
+  },
+  "src/services/authService.js": {
+    "mtime": 1790195938.9258635,
+    "ast_hash": "7ac956c86eeda1869bb5a01cb7fffb39",
+    "semantic_hash": "7ac956c86eeda1869bb5a01cb7fffb39"
+  }
+}

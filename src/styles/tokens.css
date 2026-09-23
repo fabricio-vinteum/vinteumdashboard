@@ -1,0 +1,90 @@
+/* ==========================================================================
+   Vinteum Official Brand Design Tokens (https://vinteum.io)
+   Colors: Vinteum Orange (#F07010), Midnight Navy (#150D43), Green (#61CE70)
+   Typography: Montserrat, Plus Jakarta Sans, Inter
+   ========================================================================== */
+
+:root {
+  /* Vinteum Core Brand Colors */
+  --vinteum-orange: #F07010;
+  --vinteum-orange-hover: #e06305;
+  --vinteum-orange-light: #ff8c33;
+  --vinteum-orange-bg: rgba(240, 112, 16, 0.12);
+  --vinteum-orange-glow: 0 0 25px rgba(240, 112, 16, 0.35);
+
+  --vinteum-navy: #150D43;
+  --vinteum-navy-light: #211663;
+  --vinteum-navy-dark: #0c072b;
+
+  --vinteum-green: #61CE70;
+  --vinteum-green-hover: #4fb95d;
+  --vinteum-green-bg: rgba(97, 206, 112, 0.12);
+
+  /* Surface & Background Hierarchy */
+  --bg-canvas: #0c0827;
+  --bg-subtle: #110c33;
+  --bg-surface: #150D43;
+  --bg-card: rgba(21, 13, 67, 0.72);
+  --bg-card-hover: rgba(33, 22, 99, 0.85);
+  --bg-glass: rgba(255, 255, 255, 0.04);
+  --bg-glass-active: rgba(240, 112, 16, 0.15);
+
+  /* Border Tokens */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-card: rgba(255, 255, 255, 0.10);
+  --border-card-hover: rgba(240, 112, 16, 0.45);
+  --border-glow-orange: rgba(240, 112, 16, 0.3);
+
+  /* Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #cbd5e1;
+  --text-muted: #8b85ad;
+  --text-inverse: #0c0827;
+
+  /* Semantic Palettes */
+  --emerald-500: #61CE70;
+  --emerald-400: #61CE70;
+  --emerald-bg: rgba(97, 206, 112, 0.12);
+  --emerald-glow: 0 0 20px rgba(97, 206, 112, 0.25);
+
+  --blue-500: #0ea5e9;
+  --blue-400: #38bdf8;
+  --blue-bg: rgba(14, 165, 233, 0.12);
+
+  --indigo-500: #F07010; /* Primary actions in Vinteum orange */
+  --indigo-400: #ff8c33;
+  --indigo-bg: rgba(240, 112, 16, 0.14);
+
+  --purple-500: #a855f7;
+  --purple-400: #c084fc;
+  --purple-bg: rgba(168, 85, 247, 0.12);
+
+  --amber-500: #f59e0b;
+  --amber-400: #fbbf24;
+  --amber-bg: rgba(245, 158, 11, 0.12);
+
+  --rose-500: #f43f5e;
+  --rose-400: #fb7185;
+  --rose-bg: rgba(244, 63, 94, 0.12);
+
+  /* Typography */
+  --font-display: 'Montserrat', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Elevation & Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-card: 0 8px 32px rgba(8, 5, 26, 0.55);
+  --shadow-glow: 0 10px 35px -5px rgba(240, 112, 16, 0.3);
+
+  /* Border Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  --radius-pill: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
