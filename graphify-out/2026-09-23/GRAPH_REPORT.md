@@ -4,20 +4,20 @@
 - cluster-only mode — file stats not available
 
 ## Summary
-- 103 nodes · 145 edges · 11 communities (8 shown, 3 thin omitted)
+- 102 nodes · 143 edges · 11 communities (8 shown, 3 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `8c90e83c`
+- Built from commit: `da200d00`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- dataContext.jsx
 - dependencies
 - react
 - sheetsParser.js
+- dataContext.jsx
 - devDependencies
 - package.json
 - App.jsx
@@ -29,11 +29,11 @@
 1. `react` - 15 edges
 2. `useData()` - 9 edges
 3. `formatNumber()` - 8 edges
-4. `fetchDashboardCsv()` - 6 edges
-5. `scripts` - 5 edges
-6. `formatCurrency()` - 5 edges
-7. `parseDashboardSheet()` - 5 edges
-8. `ErrorBoundary` - 5 edges
+4. `scripts` - 5 edges
+5. `formatCurrency()` - 5 edges
+6. `parseDashboardSheet()` - 5 edges
+7. `ErrorBoundary` - 5 edges
+8. `fetchDashboardCsv()` - 5 edges
 9. `RetentionView()` - 4 edges
 10. `plugins` - 3 edges
 
@@ -54,17 +54,17 @@
 
 ## Communities (11 total, 3 thin omitted)
 
-### Community 0 - "dataContext.jsx"
-Cohesion: 0.23
-Nodes (11): DataContext, DataProvider(), fetchDashboardCsv(), fetchViaJsonp(), parseCsvText(), saveToCache(), cleanNumber(), cleanPercent() (+3 more)
-
-### Community 1 - "dependencies"
+### Community 0 - "dependencies"
 Cohesion: 0.15
 Nodes (13): chart.js, lucide-react, dependencies, chart.js, lucide-react, papaparse, react, react-chartjs-2 (+5 more)
 
-### Community 3 - "sheetsParser.js"
+### Community 2 - "sheetsParser.js"
 Cohesion: 0.38
 Nodes (8): FunnelChart(), useData(), formatCurrency(), formatNumber(), formatPercent(), FunnelView(), RetentionView(), RevenueView()
+
+### Community 3 - "dataContext.jsx"
+Cohesion: 0.24
+Nodes (10): DataContext, DataProvider(), fetchDashboardCsv(), parseCsvText(), saveToCache(), cleanNumber(), cleanPercent(), MONTH_NAMES_MAP (+2 more)
 
 ### Community 4 - "devDependencies"
 Cohesion: 0.18
@@ -90,11 +90,11 @@ Nodes (7): plugins, rules, react/only-export-components, react/rules-of-hooks, $
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `react` connect `react` to `.oxlintrc.json`, `dataContext.jsx`, `sheetsParser.js`, `App.jsx`?**
-  _High betweenness centrality (0.219) - this node is a cross-community bridge._
+- **Why does `react` connect `react` to `.oxlintrc.json`, `sheetsParser.js`, `dataContext.jsx`, `App.jsx`?**
+  _High betweenness centrality (0.217) - this node is a cross-community bridge._
 - **Why does `plugins` connect `.oxlintrc.json` to `react`?**
   _High betweenness centrality (0.068) - this node is a cross-community bridge._
 - **Why does `dependencies` connect `dependencies` to `package.json`?**
-  _High betweenness centrality (0.061) - this node is a cross-community bridge._
+  _High betweenness centrality (0.062) - this node is a cross-community bridge._
 - **What connects `$schema`, `oxc`, `react/rules-of-hooks` to the rest of the system?**
   _27 weakly-connected nodes found - possible documentation gaps or missing edges._

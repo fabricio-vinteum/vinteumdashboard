@@ -42,7 +42,7 @@
       "source_file": ".oxlintrc.json",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "norm_label": "react",
       "community_name": "react",
       "id": "ref_react"
@@ -218,7 +218,7 @@
       "source_file": "package.json",
       "source_location": "L12",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "norm_label": "dependencies",
       "community_name": "dependencies",
       "id": "package_dependencies"
@@ -229,7 +229,7 @@
       "source_file": "package.json",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "norm_label": "chart.js",
       "community_name": "dependencies",
       "id": "package_dependencies_chart_js"
@@ -240,7 +240,7 @@
       "source_file": "package.json",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "norm_label": "chart.js",
       "community_name": "dependencies",
       "id": "chart_js"
@@ -251,7 +251,7 @@
       "source_file": "package.json",
       "source_location": "L14",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "norm_label": "lucide-react",
       "community_name": "dependencies",
       "id": "package_dependencies_lucide_react"
@@ -262,7 +262,7 @@
       "source_file": "package.json",
       "source_location": "L14",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "norm_label": "lucide-react",
       "community_name": "dependencies",
       "id": "lucide_react"
@@ -273,7 +273,7 @@
       "source_file": "package.json",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "norm_label": "papaparse",
       "community_name": "dependencies",
       "id": "package_dependencies_papaparse"
@@ -284,7 +284,7 @@
       "source_file": "package.json",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "norm_label": "papaparse",
       "community_name": "dependencies",
       "id": "papaparse"
@@ -295,7 +295,7 @@
       "source_file": "package.json",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "norm_label": "react",
       "community_name": "dependencies",
       "id": "package_dependencies_react"
@@ -306,7 +306,7 @@
       "source_file": "package.json",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "norm_label": "react",
       "community_name": "dependencies",
       "id": "react"
@@ -317,7 +317,7 @@
       "source_file": "package.json",
       "source_location": "L17",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "norm_label": "react-chartjs-2",
       "community_name": "dependencies",
       "id": "package_dependencies_react_chartjs_2"
@@ -328,7 +328,7 @@
       "source_file": "package.json",
       "source_location": "L17",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "norm_label": "react-chartjs-2",
       "community_name": "dependencies",
       "id": "react_chartjs_2"
@@ -339,7 +339,7 @@
       "source_file": "package.json",
       "source_location": "L18",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "norm_label": "react-dom",
       "community_name": "dependencies",
       "id": "package_dependencies_react_dom"
@@ -350,7 +350,7 @@
       "source_file": "package.json",
       "source_location": "L18",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "norm_label": "react-dom",
       "community_name": "dependencies",
       "id": "react_dom"
@@ -482,7 +482,7 @@
       "source_file": "src/components/FunnelChart.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "norm_label": "funnelchart.jsx",
       "community_name": "sheetsParser.js",
       "id": "src_components_funnelchart"
@@ -493,7 +493,7 @@
       "source_file": "src/components/FunnelChart.jsx",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "norm_label": "funnelchart()",
       "community_name": "sheetsParser.js",
       "id": "src_components_funnelchart_funnelchart"
@@ -504,7 +504,7 @@
       "source_file": "src/services/dataContext.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 0,
+      "community": 3,
       "norm_label": "datacontext.jsx",
       "community_name": "dataContext.jsx",
       "id": "src_services_datacontext"
@@ -515,7 +515,7 @@
       "source_file": "src/services/dataContext.jsx",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 0,
+      "community": 3,
       "norm_label": "datacontext",
       "community_name": "dataContext.jsx",
       "id": "src_services_datacontext_datacontext"
@@ -526,7 +526,7 @@
       "source_file": "src/services/dataContext.jsx",
       "source_location": "L7",
       "_origin": "ast",
-      "community": 0,
+      "community": 3,
       "norm_label": "dataprovider()",
       "community_name": "dataContext.jsx",
       "id": "src_services_datacontext_dataprovider"
@@ -537,7 +537,7 @@
       "source_file": "src/services/dataContext.jsx",
       "source_location": "L105",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "norm_label": "usedata()",
       "community_name": "sheetsParser.js",
       "id": "src_services_datacontext_usedata"
@@ -548,7 +548,7 @@
       "source_file": "src/services/sheetsParser.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "norm_label": "sheetsparser.js",
       "community_name": "sheetsParser.js",
       "id": "src_services_sheetsparser"
@@ -559,7 +559,7 @@
       "source_file": "src/services/sheetsParser.js",
       "source_location": "L4",
       "_origin": "ast",
-      "community": 0,
+      "community": 3,
       "norm_label": "cleannumber()",
       "community_name": "dataContext.jsx",
       "id": "src_services_sheetsparser_cleannumber"
@@ -570,7 +570,7 @@
       "source_file": "src/services/sheetsParser.js",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 0,
+      "community": 3,
       "norm_label": "cleanpercent()",
       "community_name": "dataContext.jsx",
       "id": "src_services_sheetsparser_cleanpercent"
@@ -581,7 +581,7 @@
       "source_file": "src/services/sheetsParser.js",
       "source_location": "L23",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "norm_label": "formatcurrency()",
       "community_name": "sheetsParser.js",
       "id": "src_services_sheetsparser_formatcurrency"
@@ -592,7 +592,7 @@
       "source_file": "src/services/sheetsParser.js",
       "source_location": "L33",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "norm_label": "formatnumber()",
       "community_name": "sheetsParser.js",
       "id": "src_services_sheetsparser_formatnumber"
@@ -603,7 +603,7 @@
       "source_file": "src/services/sheetsParser.js",
       "source_location": "L38",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "norm_label": "formatpercent()",
       "community_name": "sheetsParser.js",
       "id": "src_services_sheetsparser_formatpercent"
@@ -614,7 +614,7 @@
       "source_file": "src/services/sheetsParser.js",
       "source_location": "L43",
       "_origin": "ast",
-      "community": 0,
+      "community": 3,
       "norm_label": "month_names_map",
       "community_name": "dataContext.jsx",
       "id": "src_services_sheetsparser_month_names_map"
@@ -625,7 +625,7 @@
       "source_file": "src/services/sheetsParser.js",
       "source_location": "L61",
       "_origin": "ast",
-      "community": 0,
+      "community": 3,
       "norm_label": "parsedashboardsheet()",
       "community_name": "dataContext.jsx",
       "id": "src_services_sheetsparser_parsedashboardsheet"
@@ -636,7 +636,7 @@
       "source_file": "src/views/FunnelView.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "norm_label": "funnelview.jsx",
       "community_name": "sheetsParser.js",
       "id": "src_views_funnelview"
@@ -647,7 +647,7 @@
       "source_file": "src/views/FunnelView.jsx",
       "source_location": "L17",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "norm_label": "funnelview()",
       "community_name": "sheetsParser.js",
       "id": "src_views_funnelview_funnelview"
@@ -658,7 +658,7 @@
       "source_file": "src/views/MatrixView.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 0,
+      "community": 3,
       "norm_label": "matrixview.jsx",
       "community_name": "dataContext.jsx",
       "id": "src_views_matrixview"
@@ -669,7 +669,7 @@
       "source_file": "src/views/MatrixView.jsx",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 0,
+      "community": 3,
       "norm_label": "matrixview()",
       "community_name": "dataContext.jsx",
       "id": "src_views_matrixview_matrixview"
@@ -680,7 +680,7 @@
       "source_file": "src/views/RetentionView.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "norm_label": "retentionview.jsx",
       "community_name": "sheetsParser.js",
       "id": "src_views_retentionview"
@@ -691,7 +691,7 @@
       "source_file": "src/views/RetentionView.jsx",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "norm_label": "retentionview()",
       "community_name": "sheetsParser.js",
       "id": "src_views_retentionview_retentionview"
@@ -702,7 +702,7 @@
       "source_file": "src/views/RevenueView.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "norm_label": "revenueview.jsx",
       "community_name": "sheetsParser.js",
       "id": "src_views_revenueview"
@@ -713,7 +713,7 @@
       "source_file": "src/views/RevenueView.jsx",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "norm_label": "revenueview()",
       "community_name": "sheetsParser.js",
       "id": "src_views_revenueview_revenueview"
@@ -724,7 +724,7 @@
       "source_file": "src/components/ComparisonSection.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "norm_label": "comparisonsection.jsx",
       "community_name": "react",
       "id": "src_components_comparisonsection"
@@ -735,7 +735,7 @@
       "source_file": "src/components/ComparisonSection.jsx",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "norm_label": "comparisonsection()",
       "community_name": "react",
       "id": "src_components_comparisonsection_comparisonsection"
@@ -746,7 +746,7 @@
       "source_file": "src/views/OverviewView.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "norm_label": "overviewview.jsx",
       "community_name": "react",
       "id": "src_views_overviewview"
@@ -757,7 +757,7 @@
       "source_file": "src/views/OverviewView.jsx",
       "source_location": "L45",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "norm_label": "overviewview()",
       "community_name": "react",
       "id": "src_views_overviewview_overviewview"
@@ -768,7 +768,7 @@
       "source_file": "src/components/MetricCard.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "norm_label": "metriccard.jsx",
       "community_name": "react",
       "id": "src_components_metriccard"
@@ -779,7 +779,7 @@
       "source_file": "src/components/MetricCard.jsx",
       "source_location": "L4",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "norm_label": "metriccard()",
       "community_name": "react",
       "id": "src_components_metriccard_metriccard"
@@ -812,7 +812,7 @@
       "source_file": "src/components/Header.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "norm_label": "header.jsx",
       "community_name": "react",
       "id": "src_components_header"
@@ -823,7 +823,7 @@
       "source_file": "src/components/Header.jsx",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "norm_label": "header()",
       "community_name": "react",
       "id": "src_components_header_header"
@@ -834,7 +834,7 @@
       "source_file": "src/components/LoginModal.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "norm_label": "loginmodal.jsx",
       "community_name": "react",
       "id": "src_components_loginmodal"
@@ -845,7 +845,7 @@
       "source_file": "src/components/LoginModal.jsx",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "norm_label": "loginmodal()",
       "community_name": "react",
       "id": "src_components_loginmodal_loginmodal"
@@ -856,7 +856,7 @@
       "source_file": "src/components/Sidebar.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "norm_label": "sidebar.jsx",
       "community_name": "react",
       "id": "src_components_sidebar"
@@ -867,7 +867,7 @@
       "source_file": "src/components/Sidebar.jsx",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "norm_label": "sidebar()",
       "community_name": "react",
       "id": "src_components_sidebar_sidebar"
@@ -990,8 +990,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": "app.jsx",
-      "id": "src_app",
-      "community_name": "App.jsx"
+      "community_name": "App.jsx",
+      "id": "src_app"
     },
     {
       "label": "ErrorBoundary",
@@ -1001,8 +1001,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": "errorboundary",
-      "id": "src_app_errorboundary",
-      "community_name": "App.jsx"
+      "community_name": "App.jsx",
+      "id": "src_app_errorboundary"
     },
     {
       "label": ".constructor()",
@@ -1012,8 +1012,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": ".constructor()",
-      "id": "src_app_errorboundary_constructor",
-      "community_name": "App.jsx"
+      "community_name": "App.jsx",
+      "id": "src_app_errorboundary_constructor"
     },
     {
       "label": ".getDerivedStateFromError()",
@@ -1023,8 +1023,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": ".getderivedstatefromerror()",
-      "id": "src_app_errorboundary_getderivedstatefromerror",
-      "community_name": "App.jsx"
+      "community_name": "App.jsx",
+      "id": "src_app_errorboundary_getderivedstatefromerror"
     },
     {
       "label": ".componentDidCatch()",
@@ -1034,8 +1034,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": ".componentdidcatch()",
-      "id": "src_app_errorboundary_componentdidcatch",
-      "community_name": "App.jsx"
+      "community_name": "App.jsx",
+      "id": "src_app_errorboundary_componentdidcatch"
     },
     {
       "label": ".render()",
@@ -1045,8 +1045,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": ".render()",
-      "id": "src_app_errorboundary_render",
-      "community_name": "App.jsx"
+      "community_name": "App.jsx",
+      "id": "src_app_errorboundary_render"
     },
     {
       "label": "DashboardContent()",
@@ -1056,8 +1056,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": "dashboardcontent()",
-      "id": "src_app_dashboardcontent",
-      "community_name": "App.jsx"
+      "community_name": "App.jsx",
+      "id": "src_app_dashboardcontent"
     },
     {
       "label": "App()",
@@ -1067,8 +1067,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": "app()",
-      "id": "src_app_app",
-      "community_name": "App.jsx"
+      "community_name": "App.jsx",
+      "id": "src_app_app"
     },
     {
       "label": "main.jsx",
@@ -1078,8 +1078,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": "main.jsx",
-      "id": "src_main",
-      "community_name": "App.jsx"
+      "community_name": "App.jsx",
+      "id": "src_main"
     },
     {
       "label": "sheetsClient.js",
@@ -1087,7 +1087,7 @@
       "source_file": "src/services/sheetsClient.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 0,
+      "community": 3,
       "norm_label": "sheetsclient.js",
       "id": "src_services_sheetsclient",
       "community_name": "dataContext.jsx"
@@ -1096,31 +1096,20 @@
       "label": "fetchDashboardCsv()",
       "file_type": "code",
       "source_file": "src/services/sheetsClient.js",
-      "source_location": "L19",
+      "source_location": "L18",
       "_origin": "ast",
-      "community": 0,
+      "community": 3,
       "norm_label": "fetchdashboardcsv()",
       "id": "src_services_sheetsclient_fetchdashboardcsv",
-      "community_name": "dataContext.jsx"
-    },
-    {
-      "label": "fetchViaJsonp()",
-      "file_type": "code",
-      "source_file": "src/services/sheetsClient.js",
-      "source_location": "L66",
-      "_origin": "ast",
-      "community": 0,
-      "norm_label": "fetchviajsonp()",
-      "id": "src_services_sheetsclient_fetchviajsonp",
       "community_name": "dataContext.jsx"
     },
     {
       "label": "saveToCache()",
       "file_type": "code",
       "source_file": "src/services/sheetsClient.js",
-      "source_location": "L127",
+      "source_location": "L56",
       "_origin": "ast",
-      "community": 0,
+      "community": 3,
       "norm_label": "savetocache()",
       "id": "src_services_sheetsclient_savetocache",
       "community_name": "dataContext.jsx"
@@ -1129,9 +1118,9 @@
       "label": "parseCsvText()",
       "file_type": "code",
       "source_file": "src/services/sheetsClient.js",
-      "source_location": "L135",
+      "source_location": "L64",
       "_origin": "ast",
-      "community": 0,
+      "community": 3,
       "norm_label": "parsecsvtext()",
       "id": "src_services_sheetsclient_parsecsvtext",
       "community_name": "dataContext.jsx"
@@ -2596,7 +2585,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/services/sheetsClient.js",
-      "source_location": "L19",
+      "source_location": "L18",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_services_sheetsclient",
@@ -2606,17 +2595,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/services/sheetsClient.js",
-      "source_location": "L66",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_services_sheetsclient",
-      "target": "src_services_sheetsclient_fetchviajsonp"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/services/sheetsClient.js",
-      "source_location": "L135",
+      "source_location": "L64",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_services_sheetsclient",
@@ -2626,7 +2605,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/services/sheetsClient.js",
-      "source_location": "L127",
+      "source_location": "L56",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_services_sheetsclient",
@@ -2637,18 +2616,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/services/sheetsClient.js",
-      "source_location": "L24",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_services_sheetsclient_fetchdashboardcsv",
-      "target": "src_services_sheetsclient_fetchviajsonp"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/services/sheetsClient.js",
-      "source_location": "L39",
+      "source_location": "L27",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_services_sheetsclient_fetchdashboardcsv",
@@ -2659,7 +2627,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/services/sheetsClient.js",
-      "source_location": "L26",
+      "source_location": "L29",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_services_sheetsclient_fetchdashboardcsv",
@@ -2667,5 +2635,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "8c90e83c815362ab3184719d0dba0ca8843d59ea"
+  "built_at_commit": "da200d0089e782aa38289c9f392fc3e2c8ac3fe4"
 }

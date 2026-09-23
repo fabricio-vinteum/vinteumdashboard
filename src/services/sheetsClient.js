@@ -6,129 +6,58 @@ export const SHEET_ID = '1xdeFF-5oC3lUiWByzB5bk4zbdLBJphhoJXwUK_Ae9xk';
 // Foco exclusivo na planilha "Dashboard"
 export const DASHBOARD_GID = '2067051393';
 
+const CACHE_KEY = 'vinteum_dashboard_cache_v2';
+
 /**
  * Busca a aba "Dashboard" em tempo real.
  * 
- * Estratégia de Alta Disponibilidade (Resiliente a CORS):
- * 1. JSONP via Google Visualization API (<script> tag - 100% livre de bloqueio de CORS no GitHub Pages)
- * 2. Fetch CSV Direto
- * 3. Fetch GViz CSV
- * 4. Cache do LocalStorage
- * 5. Snapshot embutido offline (garante que NUNCA fique em branco)
+ * 1. Tenta fetch direto da URL oficial CSV do Google Sheets com cache-busting.
+ * 2. Se houver falha de rede/offline, verifica o cache local válido (mínimo 75 linhas).
+ * 3. Se não houver cache, utiliza o snapshot estático de 80 linhas embutido no bundle.
  */
 export async function fetchDashboardCsv() {
   const timestamp = Date.now();
-
-  // 1. Tentar via JSONP (Perfeito para GitHub Pages sem bloqueio de CORS)
-  try {
-    const jsonpData = await fetchViaJsonp(timestamp);
-    if (jsonpData && jsonpData.length > 0) {
-      saveToCache(jsonpData);
-      return jsonpData;
-    }
-  } catch (jsonpErr) {
-    console.warn('JSONP fetch falhou, tentando fetch CSV direto:', jsonpErr);
-  }
-
-  // 2. Tentar fetch direto (funciona em localhost ou com proxy)
   const primaryUrl = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${DASHBOARD_GID}&_t=${timestamp}`;
+
+  // 1. Tentar fetch direto da planilha oficial
   try {
     const res = await fetch(primaryUrl);
     if (res.ok) {
       const text = await res.text();
       const data = parseCsvText(text);
-      if (data && data.length > 0) {
+      if (Array.isArray(data) && data.length >= 75) {
         saveToCache(data);
         return data;
       }
     }
   } catch (err) {
-    console.warn('Fetch direto falhou:', err);
+    console.warn('Fetch direto da planilha falhou ou foi bloqueado, buscando cache/snapshot:', err);
   }
 
-  // 3. Tentar fallback do LocalStorage
-  const cached = localStorage.getItem('vinteum_dashboard_cache');
-  if (cached) {
-    try {
-      console.info('Utilizando dados em cache local.');
-      return JSON.parse(cached);
-    } catch (e) {}
-  }
-
-  // 4. Último fallback: Snapshot estático embutido
-  console.info('Utilizando snapshot estático da planilha.');
-  return fallbackSnapshot;
-}
-
-/**
- * Executa requisição JSONP via tag <script> dinâmica para contornar qualquer restrição de CORS
- */
-function fetchViaJsonp(timestamp) {
-  return new Promise((resolve, reject) => {
-    const callbackName = `__vinteum_gviz_cb_${Date.now()}_${Math.floor(Math.random() * 10000)}`;
-    const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=responseHandler:${callbackName}&gid=${DASHBOARD_GID}&_t=${timestamp}`;
-
-    const script = document.createElement('script');
-    script.src = url;
-    script.async = true;
-
-    const timeoutTimer = setTimeout(() => {
-      cleanup();
-      reject(new Error('JSONP request timed out (7s)'));
-    }, 7000);
-
-    function cleanup() {
-      clearTimeout(timeoutTimer);
-      delete window[callbackName];
-      if (script.parentNode) {
-        script.parentNode.removeChild(script);
+  // 2. Tentar fallback do LocalStorage
+  try {
+    const cached = localStorage.getItem(CACHE_KEY);
+    if (cached) {
+      const parsedCache = JSON.parse(cached);
+      if (Array.isArray(parsedCache) && parsedCache.length >= 75) {
+        console.info('Utilizando dados em cache local.');
+        return parsedCache;
       }
     }
+  } catch (e) {
+    console.warn('Erro ao ler cache local:', e);
+  }
 
-    window[callbackName] = function (response) {
-      cleanup();
-      try {
-        if (!response || !response.table) {
-          reject(new Error('Resposta inválida do Google Visualization API'));
-          return;
-        }
-
-        const table = response.table;
-        // Linha de cabeçalho
-        const headerRow = table.cols.map(c => (c && c.label !== undefined ? c.label : ''));
-        
-        // Linhas de dados
-        const dataRows = table.rows.map(r => {
-          if (!r || !r.c) return [];
-          return r.c.map(cell => {
-            if (!cell) return '';
-            if (cell.f !== undefined && cell.f !== null) return cell.f;
-            if (cell.v !== undefined && cell.v !== null) return String(cell.v);
-            return '';
-          });
-        });
-
-        const fullMatrix = [headerRow, ...dataRows];
-        resolve(fullMatrix);
-      } catch (err) {
-        reject(err);
-      }
-    };
-
-    script.onerror = function (e) {
-      cleanup();
-      reject(new Error('Erro ao carregar script JSONP do Google Sheets'));
-    };
-
-    document.head.appendChild(script);
-  });
+  // 3. Fallback garantido: Snapshot de 80 linhas embutido
+  console.info('Utilizando snapshot estático da planilha com 80 linhas.');
+  return fallbackSnapshot;
 }
 
 function saveToCache(data) {
   try {
-    localStorage.setItem('vinteum_dashboard_cache', JSON.stringify(data));
+    localStorage.setItem(CACHE_KEY, JSON.stringify(data));
   } catch (e) {
-    // Ignorar erro de cota de armazenamento se cheio
+    // Ignorar erro se cota exceder
   }
 }
 

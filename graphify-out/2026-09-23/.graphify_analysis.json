@@ -1,22 +1,6 @@
 {
   "communities": {
     "0": [
-      "src_services_datacontext",
-      "src_services_datacontext_datacontext",
-      "src_services_datacontext_dataprovider",
-      "src_services_sheetsclient",
-      "src_services_sheetsclient_fetchdashboardcsv",
-      "src_services_sheetsclient_fetchviajsonp",
-      "src_services_sheetsclient_parsecsvtext",
-      "src_services_sheetsclient_savetocache",
-      "src_services_sheetsparser_cleannumber",
-      "src_services_sheetsparser_cleanpercent",
-      "src_services_sheetsparser_month_names_map",
-      "src_services_sheetsparser_parsedashboardsheet",
-      "src_views_matrixview",
-      "src_views_matrixview_matrixview"
-    ],
-    "1": [
       "chart_js",
       "lucide_react",
       "package_dependencies",
@@ -31,7 +15,7 @@
       "react_chartjs_2",
       "react_dom"
     ],
-    "2": [
+    "1": [
       "ref_react",
       "src_components_comparisonsection",
       "src_components_comparisonsection_comparisonsection",
@@ -46,7 +30,7 @@
       "src_views_overviewview",
       "src_views_overviewview_overviewview"
     ],
-    "3": [
+    "2": [
       "src_components_funnelchart",
       "src_components_funnelchart_funnelchart",
       "src_services_datacontext_usedata",
@@ -60,6 +44,21 @@
       "src_views_retentionview_retentionview",
       "src_views_revenueview",
       "src_views_revenueview_revenueview"
+    ],
+    "3": [
+      "src_services_datacontext",
+      "src_services_datacontext_datacontext",
+      "src_services_datacontext_dataprovider",
+      "src_services_sheetsclient",
+      "src_services_sheetsclient_fetchdashboardcsv",
+      "src_services_sheetsclient_parsecsvtext",
+      "src_services_sheetsclient_savetocache",
+      "src_services_sheetsparser_cleannumber",
+      "src_services_sheetsparser_cleanpercent",
+      "src_services_sheetsparser_month_names_map",
+      "src_services_sheetsparser_parsedashboardsheet",
+      "src_views_matrixview",
+      "src_views_matrixview_matrixview"
     ],
     "4": [
       "oxlint",
@@ -127,10 +126,10 @@
     ]
   },
   "cohesion": {
-    "0": 0.23076923076923078,
-    "1": 0.15384615384615385,
-    "2": 0.1794871794871795,
-    "3": 0.38461538461538464,
+    "0": 0.15384615384615385,
+    "1": 0.1794871794871795,
+    "2": 0.38461538461538464,
+    "3": 0.24358974358974358,
     "4": 0.18181818181818182,
     "5": 0.2,
     "6": 0.25,
@@ -156,11 +155,6 @@
       "degree": 8
     },
     {
-      "id": "src_services_sheetsclient_fetchdashboardcsv",
-      "label": "fetchDashboardCsv()",
-      "degree": 6
-    },
-    {
       "id": "package_scripts",
       "label": "scripts",
       "degree": 5
@@ -178,6 +172,11 @@
     {
       "id": "src_app_errorboundary",
       "label": "ErrorBoundary",
+      "degree": 5
+    },
+    {
+      "id": "src_services_sheetsclient_fetchdashboardcsv",
+      "label": "fetchDashboardCsv()",
       "degree": 5
     },
     {
