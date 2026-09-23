@@ -63,11 +63,17 @@ export async function authenticateUser(username, password, remember = false) {
     return { success: false, error: 'Credenciais inválidas. Verifique usuário e senha.' };
   }
 
-  // Gera o hash combinado: usuario:senha:salt
-  const combined = `${cleanUser}:${cleanPass}:${EXPECTED_SALT}`;
-  const computedHash = await computeSHA256(combined);
+  // Gera o hash combinado: usuario:senha:salt e também apenas senha:salt
+  const combinedUserPass = `${cleanUser}:${cleanPass}:${EXPECTED_SALT}`;
+  const purePass = `${cleanPass}:${EXPECTED_SALT}`;
 
-  if (computedHash.toLowerCase() === EXPECTED_HASH) {
+  const hashUserPass = await computeSHA256(combinedUserPass);
+  const hashPurePass = await computeSHA256(purePass);
+
+  const isMatch = (hashUserPass.toLowerCase() === EXPECTED_HASH) || 
+                  (hashPurePass.toLowerCase() === EXPECTED_HASH);
+
+  if (isMatch) {
     // Cria token de sessão
     const sessionToken = btoa(`${cleanUser}:${Date.now()}`);
     

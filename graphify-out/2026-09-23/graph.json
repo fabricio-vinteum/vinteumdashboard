@@ -484,7 +484,7 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "funnelchart.jsx",
-      "community_name": "dataContext.jsx",
+      "community_name": "sheetsParser.js",
       "id": "src_components_funnelchart"
     },
     {
@@ -495,7 +495,7 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "funnelchart()",
-      "community_name": "dataContext.jsx",
+      "community_name": "sheetsParser.js",
       "id": "src_components_funnelchart_funnelchart"
     },
     {
@@ -506,7 +506,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "main.jsx",
-      "community_name": "App.jsx",
+      "community_name": "react",
       "id": "src_main"
     },
     {
@@ -550,7 +550,7 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "usedata()",
-      "community_name": "dataContext.jsx",
+      "community_name": "sheetsParser.js",
       "id": "src_services_datacontext_usedata"
     },
     {
@@ -594,7 +594,7 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "sheetsparser.js",
-      "community_name": "dataContext.jsx",
+      "community_name": "sheetsParser.js",
       "id": "src_services_sheetsparser"
     },
     {
@@ -627,7 +627,7 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "formatcurrency()",
-      "community_name": "dataContext.jsx",
+      "community_name": "sheetsParser.js",
       "id": "src_services_sheetsparser_formatcurrency"
     },
     {
@@ -638,7 +638,7 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "formatnumber()",
-      "community_name": "dataContext.jsx",
+      "community_name": "sheetsParser.js",
       "id": "src_services_sheetsparser_formatnumber"
     },
     {
@@ -649,7 +649,7 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "formatpercent()",
-      "community_name": "dataContext.jsx",
+      "community_name": "sheetsParser.js",
       "id": "src_services_sheetsparser_formatpercent"
     },
     {
@@ -682,7 +682,7 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "funnelview.jsx",
-      "community_name": "dataContext.jsx",
+      "community_name": "sheetsParser.js",
       "id": "src_views_funnelview"
     },
     {
@@ -693,7 +693,7 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "funnelview()",
-      "community_name": "dataContext.jsx",
+      "community_name": "sheetsParser.js",
       "id": "src_views_funnelview_funnelview"
     },
     {
@@ -704,7 +704,7 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "matrixview.jsx",
-      "community_name": "dataContext.jsx",
+      "community_name": "sheetsParser.js",
       "id": "src_views_matrixview"
     },
     {
@@ -715,7 +715,7 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "matrixview()",
-      "community_name": "dataContext.jsx",
+      "community_name": "sheetsParser.js",
       "id": "src_views_matrixview_matrixview"
     },
     {
@@ -726,7 +726,7 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "retentionview.jsx",
-      "community_name": "dataContext.jsx",
+      "community_name": "sheetsParser.js",
       "id": "src_views_retentionview"
     },
     {
@@ -737,7 +737,7 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "retentionview()",
-      "community_name": "dataContext.jsx",
+      "community_name": "sheetsParser.js",
       "id": "src_views_retentionview_retentionview"
     },
     {
@@ -748,7 +748,7 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "revenueview.jsx",
-      "community_name": "dataContext.jsx",
+      "community_name": "sheetsParser.js",
       "id": "src_views_revenueview"
     },
     {
@@ -759,7 +759,7 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "revenueview()",
-      "community_name": "dataContext.jsx",
+      "community_name": "sheetsParser.js",
       "id": "src_views_revenueview_revenueview"
     },
     {
@@ -858,7 +858,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "app.jsx",
-      "community_name": "App.jsx",
+      "community_name": "react",
       "id": "src_app"
     },
     {
@@ -869,7 +869,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "dashboardcontent()",
-      "community_name": "App.jsx",
+      "community_name": "react",
       "id": "src_app_dashboardcontent"
     },
     {
@@ -880,107 +880,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "app()",
-      "community_name": "App.jsx",
+      "community_name": "react",
       "id": "src_app_app"
-    },
-    {
-      "label": "authService.js",
-      "file_type": "code",
-      "source_file": "src/services/authService.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 7,
-      "norm_label": "authservice.js",
-      "community_name": "App.jsx",
-      "id": "src_services_authservice"
-    },
-    {
-      "label": "EXPECTED_USER",
-      "file_type": "code",
-      "source_file": "src/services/authService.js",
-      "source_location": "L16",
-      "_origin": "ast",
-      "community": 7,
-      "norm_label": "expected_user",
-      "community_name": "App.jsx",
-      "id": "src_services_authservice_expected_user"
-    },
-    {
-      "label": "EXPECTED_HASH",
-      "file_type": "code",
-      "source_file": "src/services/authService.js",
-      "source_location": "L18",
-      "_origin": "ast",
-      "community": 7,
-      "norm_label": "expected_hash",
-      "community_name": "App.jsx",
-      "id": "src_services_authservice_expected_hash"
-    },
-    {
-      "label": "computeSHA256()",
-      "file_type": "code",
-      "source_file": "src/services/authService.js",
-      "source_location": "L23",
-      "_origin": "ast",
-      "community": 7,
-      "norm_label": "computesha256()",
-      "community_name": "App.jsx",
-      "id": "src_services_authservice_computesha256"
-    },
-    {
-      "label": "fallbackHash()",
-      "file_type": "code",
-      "source_file": "src/services/authService.js",
-      "source_location": "L40",
-      "_origin": "ast",
-      "community": 7,
-      "norm_label": "fallbackhash()",
-      "community_name": "App.jsx",
-      "id": "src_services_authservice_fallbackhash"
-    },
-    {
-      "label": "authenticateUser()",
-      "file_type": "code",
-      "source_file": "src/services/authService.js",
-      "source_location": "L53",
-      "_origin": "ast",
-      "community": 7,
-      "norm_label": "authenticateuser()",
-      "community_name": "App.jsx",
-      "id": "src_services_authservice_authenticateuser"
-    },
-    {
-      "label": "isUserAuthenticated()",
-      "file_type": "code",
-      "source_file": "src/services/authService.js",
-      "source_location": "L91",
-      "_origin": "ast",
-      "community": 0,
-      "norm_label": "isuserauthenticated()",
-      "community_name": "App.jsx",
-      "id": "src_services_authservice_isuserauthenticated"
-    },
-    {
-      "label": "getAuthenticatedUser()",
-      "file_type": "code",
-      "source_file": "src/services/authService.js",
-      "source_location": "L100",
-      "_origin": "ast",
-      "community": 7,
-      "norm_label": "getauthenticateduser()",
-      "community_name": "App.jsx",
-      "id": "src_services_authservice_getauthenticateduser"
-    },
-    {
-      "label": "logoutUser()",
-      "file_type": "code",
-      "source_file": "src/services/authService.js",
-      "source_location": "L107",
-      "_origin": "ast",
-      "community": 0,
-      "norm_label": "logoutuser()",
-      "community_name": "App.jsx",
-      "id": "src_services_authservice_logoutuser"
     },
     {
       "label": "Header.jsx",
@@ -988,9 +889,10 @@
       "source_file": "src/components/Header.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_components_header",
       "community": 0,
-      "norm_label": "header.jsx"
+      "norm_label": "header.jsx",
+      "community_name": "react",
+      "id": "src_components_header"
     },
     {
       "label": "Header()",
@@ -998,9 +900,10 @@
       "source_file": "src/components/Header.jsx",
       "source_location": "L16",
       "_origin": "ast",
-      "id": "src_components_header_header",
       "community": 0,
-      "norm_label": "header()"
+      "norm_label": "header()",
+      "community_name": "react",
+      "id": "src_components_header_header"
     },
     {
       "label": "LoginModal.jsx",
@@ -1008,9 +911,10 @@
       "source_file": "src/components/LoginModal.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_components_loginmodal",
       "community": 0,
-      "norm_label": "loginmodal.jsx"
+      "norm_label": "loginmodal.jsx",
+      "community_name": "react",
+      "id": "src_components_loginmodal"
     },
     {
       "label": "LoginModal()",
@@ -1018,9 +922,10 @@
       "source_file": "src/components/LoginModal.jsx",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "src_components_loginmodal_loginmodal",
       "community": 0,
-      "norm_label": "loginmodal()"
+      "norm_label": "loginmodal()",
+      "community_name": "react",
+      "id": "src_components_loginmodal_loginmodal"
     },
     {
       "label": "Sidebar.jsx",
@@ -1028,9 +933,10 @@
       "source_file": "src/components/Sidebar.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_components_sidebar",
       "community": 0,
-      "norm_label": "sidebar.jsx"
+      "norm_label": "sidebar.jsx",
+      "community_name": "react",
+      "id": "src_components_sidebar"
     },
     {
       "label": "Sidebar()",
@@ -1038,9 +944,10 @@
       "source_file": "src/components/Sidebar.jsx",
       "source_location": "L13",
       "_origin": "ast",
-      "id": "src_components_sidebar_sidebar",
       "community": 0,
-      "norm_label": "sidebar()"
+      "norm_label": "sidebar()",
+      "community_name": "react",
+      "id": "src_components_sidebar_sidebar"
     },
     {
       "label": "vite.config.js",
@@ -1048,9 +955,100 @@
       "source_file": "vite.config.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "vite_config",
       "community": 9,
-      "norm_label": "vite.config.js"
+      "norm_label": "vite.config.js",
+      "community_name": "vite.config.js",
+      "id": "vite_config"
+    },
+    {
+      "label": "authService.js",
+      "file_type": "code",
+      "source_file": "src/services/authService.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_services_authservice",
+      "community": 7,
+      "norm_label": "authservice.js"
+    },
+    {
+      "label": "EXPECTED_USER",
+      "file_type": "code",
+      "source_file": "src/services/authService.js",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "src_services_authservice_expected_user",
+      "community": 7,
+      "norm_label": "expected_user"
+    },
+    {
+      "label": "EXPECTED_HASH",
+      "file_type": "code",
+      "source_file": "src/services/authService.js",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "src_services_authservice_expected_hash",
+      "community": 7,
+      "norm_label": "expected_hash"
+    },
+    {
+      "label": "computeSHA256()",
+      "file_type": "code",
+      "source_file": "src/services/authService.js",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "src_services_authservice_computesha256",
+      "community": 7,
+      "norm_label": "computesha256()"
+    },
+    {
+      "label": "fallbackHash()",
+      "file_type": "code",
+      "source_file": "src/services/authService.js",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "src_services_authservice_fallbackhash",
+      "community": 7,
+      "norm_label": "fallbackhash()"
+    },
+    {
+      "label": "authenticateUser()",
+      "file_type": "code",
+      "source_file": "src/services/authService.js",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "src_services_authservice_authenticateuser",
+      "community": 7,
+      "norm_label": "authenticateuser()"
+    },
+    {
+      "label": "isUserAuthenticated()",
+      "file_type": "code",
+      "source_file": "src/services/authService.js",
+      "source_location": "L97",
+      "_origin": "ast",
+      "id": "src_services_authservice_isuserauthenticated",
+      "community": 0,
+      "norm_label": "isuserauthenticated()"
+    },
+    {
+      "label": "getAuthenticatedUser()",
+      "file_type": "code",
+      "source_file": "src/services/authService.js",
+      "source_location": "L106",
+      "_origin": "ast",
+      "id": "src_services_authservice_getauthenticateduser",
+      "community": 7,
+      "norm_label": "getauthenticateduser()"
+    },
+    {
+      "label": "logoutUser()",
+      "file_type": "code",
+      "source_file": "src/services/authService.js",
+      "source_location": "L113",
+      "_origin": "ast",
+      "id": "src_services_authservice_logoutuser",
+      "community": 0,
+      "norm_label": "logoutuser()"
     }
   ],
   "links": [
@@ -1146,9 +1144,9 @@
       "source_file": "src/components/Header.jsx",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_header",
-      "target": "ref_react",
-      "confidence_score": 1.0
+      "target": "ref_react"
     },
     {
       "relation": "imports_from",
@@ -1157,9 +1155,9 @@
       "source_file": "src/components/LoginModal.jsx",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_loginmodal",
-      "target": "ref_react",
-      "confidence_score": 1.0
+      "target": "ref_react"
     },
     {
       "relation": "imports_from",
@@ -1179,9 +1177,9 @@
       "source_file": "src/components/Sidebar.jsx",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_sidebar",
-      "target": "ref_react",
-      "confidence_score": 1.0
+      "target": "ref_react"
     },
     {
       "relation": "imports_from",
@@ -2459,12 +2457,42 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/components/Header.jsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_header",
+      "target": "src_components_header_header"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/LoginModal.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_loginmodal",
+      "target": "src_components_loginmodal_loginmodal"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Sidebar.jsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_sidebar",
+      "target": "src_components_sidebar_sidebar"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/services/authService.js",
       "source_location": "L53",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_services_authservice",
-      "target": "src_services_authservice_authenticateuser"
+      "target": "src_services_authservice_authenticateuser",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2472,9 +2500,9 @@
       "source_file": "src/services/authService.js",
       "source_location": "L23",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_services_authservice",
-      "target": "src_services_authservice_computesha256"
+      "target": "src_services_authservice_computesha256",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2482,9 +2510,9 @@
       "source_file": "src/services/authService.js",
       "source_location": "L18",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_services_authservice",
-      "target": "src_services_authservice_expected_hash"
+      "target": "src_services_authservice_expected_hash",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2492,9 +2520,9 @@
       "source_file": "src/services/authService.js",
       "source_location": "L16",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_services_authservice",
-      "target": "src_services_authservice_expected_user"
+      "target": "src_services_authservice_expected_user",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2502,50 +2530,50 @@
       "source_file": "src/services/authService.js",
       "source_location": "L40",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_services_authservice",
-      "target": "src_services_authservice_fallbackhash"
+      "target": "src_services_authservice_fallbackhash",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/services/authService.js",
-      "source_location": "L100",
+      "source_location": "L106",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_services_authservice",
-      "target": "src_services_authservice_getauthenticateduser"
+      "target": "src_services_authservice_getauthenticateduser",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/services/authService.js",
-      "source_location": "L91",
+      "source_location": "L97",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_services_authservice",
-      "target": "src_services_authservice_isuserauthenticated"
+      "target": "src_services_authservice_isuserauthenticated",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/services/authService.js",
-      "source_location": "L107",
+      "source_location": "L113",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_services_authservice",
-      "target": "src_services_authservice_logoutuser"
+      "target": "src_services_authservice_logoutuser",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/services/authService.js",
-      "source_location": "L68",
+      "source_location": "L70",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_services_authservice_authenticateuser",
-      "target": "src_services_authservice_computesha256"
+      "target": "src_services_authservice_computesha256",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2554,41 +2582,11 @@
       "source_file": "src/services/authService.js",
       "source_location": "L33",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_services_authservice_computesha256",
-      "target": "src_services_authservice_fallbackhash"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Header.jsx",
-      "source_location": "L16",
-      "weight": 1.0,
-      "source": "src_components_header",
-      "target": "src_components_header_header",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/LoginModal.jsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "src_components_loginmodal",
-      "target": "src_components_loginmodal_loginmodal",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Sidebar.jsx",
-      "source_location": "L13",
-      "weight": 1.0,
-      "source": "src_components_sidebar",
-      "target": "src_components_sidebar_sidebar",
+      "target": "src_services_authservice_fallbackhash",
       "confidence_score": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "22c3b25e67042915e042e642185e99b4ba7a1a9a"
+  "built_at_commit": "9c8aa3875bc16eb688fb1f16332fb1ddc7a331f6"
 }
