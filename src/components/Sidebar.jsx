@@ -39,7 +39,7 @@ export default function Sidebar() {
         <div style={{ padding: '0 0.5rem 1.5rem 0.5rem', borderBottom: '1px solid var(--border-subtle)', marginBottom: '1.25rem' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
             <img 
-              src="./vinteum-logo.svg" 
+              src={`${import.meta.env.BASE_URL}vinteum-logo.svg`}
               alt="Vinteum Logo" 
               style={{ width: '38px', height: '38px', objectFit: 'contain' }}
               onError={(e) => {

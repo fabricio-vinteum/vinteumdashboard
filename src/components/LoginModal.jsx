@@ -92,7 +92,7 @@ export default function LoginModal({ onLoginSuccess }) {
             boxShadow: '0 8px 24px rgba(240, 112, 16, 0.45)'
           }}>
             <img 
-              src="./vinteum-logo.svg" 
+              src={`${import.meta.env.BASE_URL}vinteum-logo.svg`}
               alt="Vinteum Logo" 
               style={{ width: '38px', height: '38px', filter: 'brightness(0) invert(1)' }} 
             />

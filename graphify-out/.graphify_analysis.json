@@ -1,23 +1,34 @@
 {
   "communities": {
     "0": [
+      "ref_react",
+      "src_app",
+      "src_app_app",
+      "src_app_dashboardcontent",
+      "src_components_comparisonsection",
+      "src_components_comparisonsection_comparisonsection",
+      "src_components_header",
+      "src_components_header_header",
+      "src_components_loginmodal",
+      "src_components_loginmodal_loginmodal",
+      "src_components_metriccard",
+      "src_components_metriccard_metriccard",
+      "src_components_sidebar",
+      "src_components_sidebar_sidebar",
+      "src_main",
+      "src_services_authservice_isuserauthenticated",
+      "src_services_authservice_logoutuser",
+      "src_views_overviewview",
+      "src_views_overviewview_overviewview"
+    ],
+    "1": [
       "src_components_funnelchart",
       "src_components_funnelchart_funnelchart",
-      "src_services_datacontext",
-      "src_services_datacontext_datacontext",
-      "src_services_datacontext_dataprovider",
       "src_services_datacontext_usedata",
-      "src_services_sheetsclient",
-      "src_services_sheetsclient_fetchdashboardcsv",
-      "src_services_sheetsclient_parsecsvtext",
       "src_services_sheetsparser",
-      "src_services_sheetsparser_cleannumber",
-      "src_services_sheetsparser_cleanpercent",
       "src_services_sheetsparser_formatcurrency",
       "src_services_sheetsparser_formatnumber",
       "src_services_sheetsparser_formatpercent",
-      "src_services_sheetsparser_month_names_map",
-      "src_services_sheetsparser_parsedashboardsheet",
       "src_views_funnelview",
       "src_views_funnelview_funnelview",
       "src_views_matrixview",
@@ -26,25 +37,6 @@
       "src_views_retentionview_retentionview",
       "src_views_revenueview",
       "src_views_revenueview_revenueview"
-    ],
-    "1": [
-      "src_app",
-      "src_app_app",
-      "src_app_dashboardcontent",
-      "src_components_header",
-      "src_components_header_header",
-      "src_components_loginmodal",
-      "src_components_loginmodal_loginmodal",
-      "src_main",
-      "src_services_authservice",
-      "src_services_authservice_authenticateuser",
-      "src_services_authservice_computesha256",
-      "src_services_authservice_expected_hash",
-      "src_services_authservice_expected_user",
-      "src_services_authservice_fallbackhash",
-      "src_services_authservice_getauthenticateduser",
-      "src_services_authservice_isuserauthenticated",
-      "src_services_authservice_logoutuser"
     ],
     "2": [
       "chart_js",
@@ -87,15 +79,16 @@
       "package_version"
     ],
     "5": [
-      "ref_react",
-      "src_components_comparisonsection",
-      "src_components_comparisonsection_comparisonsection",
-      "src_components_metriccard",
-      "src_components_metriccard_metriccard",
-      "src_components_sidebar",
-      "src_components_sidebar_sidebar",
-      "src_views_overviewview",
-      "src_views_overviewview_overviewview"
+      "src_services_datacontext",
+      "src_services_datacontext_datacontext",
+      "src_services_datacontext_dataprovider",
+      "src_services_sheetsclient",
+      "src_services_sheetsclient_fetchdashboardcsv",
+      "src_services_sheetsclient_parsecsvtext",
+      "src_services_sheetsparser_cleannumber",
+      "src_services_sheetsparser_cleanpercent",
+      "src_services_sheetsparser_month_names_map",
+      "src_services_sheetsparser_parsedashboardsheet"
     ],
     "6": [
       "oxlintrc",
@@ -108,47 +101,33 @@
       "ref_warn"
     ],
     "7": [
+      "src_services_authservice",
+      "src_services_authservice_authenticateuser",
+      "src_services_authservice_computesha256",
+      "src_services_authservice_expected_hash",
+      "src_services_authservice_expected_user",
+      "src_services_authservice_fallbackhash",
+      "src_services_authservice_getauthenticateduser"
+    ],
+    "8": [
       "generate_hash",
       "generate_hash_hash"
     ],
-    "8": [
-      "scratch_download_logo"
-    ],
     "9": [
-      "scratch_download_wordmark"
-    ],
-    "10": [
-      "scratch_inspect_vinteum_brand"
-    ],
-    "11": [
-      "scratch_test_dashboard_parse"
-    ],
-    "12": [
-      "scratch_test_full_parser"
-    ],
-    "13": [
-      "scratch_verify_columns"
-    ],
-    "14": [
       "vite_config"
     ]
   },
   "cohesion": {
-    "0": 0.19333333333333333,
-    "1": 0.22794117647058823,
+    "0": 0.16374269005847952,
+    "1": 0.3142857142857143,
     "2": 0.15384615384615385,
     "3": 0.18181818181818182,
     "4": 0.2,
-    "5": 0.2777777777777778,
+    "5": 0.3111111111111111,
     "6": 0.25,
-    "7": 1.0,
+    "7": 0.38095238095238093,
     "8": 1.0,
-    "9": 1.0,
-    "10": 1.0,
-    "11": 1.0,
-    "12": 1.0,
-    "13": 1.0,
-    "14": 1.0
+    "9": 1.0
   },
   "gods": [
     {
@@ -197,9 +176,9 @@
       "degree": 4
     },
     {
-      "id": "src_services_authservice_authenticateuser",
-      "label": "authenticateUser()",
-      "degree": 4
+      "id": "oxlintrc_plugins",
+      "label": "plugins",
+      "degree": 3
     }
   ],
   "surprises": [
@@ -262,18 +241,18 @@
   "questions": [
     {
       "type": "bridge_node",
-      "question": "Why does `react` connect `react` to `dataContext.jsx`, `App.jsx`, `.oxlintrc.json`?",
-      "why": "High betweenness centrality (0.236) - this node is a cross-community bridge."
+      "question": "Why does `react` connect `react` to `sheetsParser.js`, `dataContext.jsx`, `.oxlintrc.json`?",
+      "why": "High betweenness centrality (0.267) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
       "question": "Why does `plugins` connect `.oxlintrc.json` to `react`?",
-      "why": "High betweenness centrality (0.072) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.081) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
       "question": "Why does `dependencies` connect `dependencies` to `package.json`?",
-      "why": "High betweenness centrality (0.062) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.070) - this node is a cross-community bridge."
     },
     {
       "type": "isolated_nodes",

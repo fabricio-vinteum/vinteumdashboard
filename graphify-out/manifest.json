@@ -20,9 +20,9 @@
     "semantic_hash": "d3ad6ecb4984716c9eb4968e27733e3d"
   },
   "src/components/Header.jsx": {
-    "mtime": 1790195995.1761549,
-    "ast_hash": "7c3c8b1a7ef980343be64c046c5d71fd",
-    "semantic_hash": "7c3c8b1a7ef980343be64c046c5d71fd"
+    "mtime": 1790196487.0393589,
+    "ast_hash": "b869da12f785d0e0ec52a46a9f349920",
+    "semantic_hash": "b869da12f785d0e0ec52a46a9f349920"
   },
   "src/components/MetricCard.jsx": {
     "mtime": 1790195760.0736134,
@@ -30,9 +30,9 @@
     "semantic_hash": "8d7e1dbd79aeb1a557483999e4bf06a4"
   },
   "src/components/Sidebar.jsx": {
-    "mtime": 1790195711.4082048,
-    "ast_hash": "1a643f31e1346ef3594c6cb99edc39db",
-    "semantic_hash": "1a643f31e1346ef3594c6cb99edc39db"
+    "mtime": 1790196495.501557,
+    "ast_hash": "53ab7005d9154406f8b5cb7f882797cc",
+    "semantic_hash": "53ab7005d9154406f8b5cb7f882797cc"
   },
   "src/main.jsx": {
     "mtime": 1790193937.939404,
@@ -60,9 +60,9 @@
     "semantic_hash": "541c339f0831fcd14f38a7b7f0039aaf"
   },
   "vite.config.js": {
-    "mtime": 1790193976.458145,
-    "ast_hash": "a5d6115a66442ea07d01dd527b73a9c9",
-    "semantic_hash": "a5d6115a66442ea07d01dd527b73a9c9"
+    "mtime": 1790196453.793862,
+    "ast_hash": "5f68be556869ae8fcbbefaa42eb99eb9",
+    "semantic_hash": "5f68be556869ae8fcbbefaa42eb99eb9"
   },
   "scratch/test_dashboard_parse.py": {
     "mtime": 1790195055.4978194,
@@ -125,9 +125,9 @@
     "semantic_hash": "29a0b4295121d9e3b2f6821d919009f3"
   },
   "src/components/LoginModal.jsx": {
-    "mtime": 1790195961.2701526,
-    "ast_hash": "71312001a5bdc45f90afa224d1cbc568",
-    "semantic_hash": "71312001a5bdc45f90afa224d1cbc568"
+    "mtime": 1790196504.9084685,
+    "ast_hash": "a152601ca5e3a63119438569127d3a93",
+    "semantic_hash": "a152601ca5e3a63119438569127d3a93"
   },
   "src/services/authService.js": {
     "mtime": 1790195938.9258635,

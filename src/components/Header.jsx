@@ -67,7 +67,7 @@ export default function Header({ onLogout }) {
           boxShadow: '0 4px 18px rgba(240, 112, 16, 0.4)'
         }}>
           <img 
-            src="./vinteum-logo.svg" 
+            src={`${import.meta.env.BASE_URL}vinteum-logo.svg`}
             alt="Vinteum Icon" 
             style={{ width: '26px', height: '26px', filter: 'brightness(0) invert(1)' }} 
           />
