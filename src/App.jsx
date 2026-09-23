@@ -11,6 +11,55 @@ import LoginModal from './components/LoginModal';
 import { isUserAuthenticated, logoutUser } from './services/authService';
 import { Activity } from 'lucide-react';
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('ErrorBoundary capturou erro:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          height: '100vh',
+          padding: '2rem',
+          color: '#ffffff',
+          textAlign: 'center'
+        }}>
+          <h2 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: 'var(--vinteum-orange)' }}>
+            Ops! Ocorreu um problema ao renderizar o painel
+          </h2>
+          <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', maxWidth: '500px' }}>
+            {this.state.error?.message || 'Erro inesperado na renderização.'}
+          </p>
+          <button
+            onClick={() => {
+              this.setState({ hasError: false, error: null });
+              window.location.reload();
+            }}
+            className="btn btn-primary"
+          >
+            Recarregar Página
+          </button>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
 function DashboardContent({ onLogout }) {
   const { loading, activeView } = useData();
 
@@ -30,11 +79,11 @@ function DashboardContent({ onLogout }) {
           width: '54px',
           height: '54px',
           borderRadius: '16px',
-          background: 'linear-gradient(135deg, var(--indigo-500), var(--emerald-500))',
+          background: 'linear-gradient(135deg, var(--vinteum-orange), #ff8c33)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          boxShadow: '0 0 30px rgba(16, 185, 129, 0.4)',
+          boxShadow: '0 0 30px rgba(240, 112, 16, 0.4)',
           marginBottom: '1.25rem'
         }}>
           <Activity size={28} color="#ffffff" className="animate-spin" />
@@ -92,9 +141,10 @@ export default function App() {
   }
 
   return (
-    <DataProvider>
-      <DashboardContent onLogout={handleLogout} />
-    </DataProvider>
+    <ErrorBoundary>
+      <DataProvider>
+        <DashboardContent onLogout={handleLogout} />
+      </DataProvider>
+    </ErrorBoundary>
   );
 }
-

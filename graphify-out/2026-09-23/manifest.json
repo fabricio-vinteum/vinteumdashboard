@@ -10,9 +10,9 @@
     "semantic_hash": "1b73808aee88ba0597b2241a82cbaa0e"
   },
   "src/App.jsx": {
-    "mtime": 1790195970.3177612,
-    "ast_hash": "eed8bc1ac49e784bcd02043970706e10",
-    "semantic_hash": "eed8bc1ac49e784bcd02043970706e10"
+    "mtime": 1790198182.2003002,
+    "ast_hash": "432643a2bf9d47413cef2a47a43a26a1",
+    "semantic_hash": "432643a2bf9d47413cef2a47a43a26a1"
   },
   "src/components/FunnelChart.jsx": {
     "mtime": 1790194124.720129,
@@ -35,9 +35,9 @@
     "semantic_hash": "53ab7005d9154406f8b5cb7f882797cc"
   },
   "src/main.jsx": {
-    "mtime": 1790193937.939404,
-    "ast_hash": "e13723e2574429d9a6d849727e3ff695",
-    "semantic_hash": "e13723e2574429d9a6d849727e3ff695"
+    "mtime": 1790198157.5148673,
+    "ast_hash": "a0a89a0b5e343cf2adc7a7b5649dc359",
+    "semantic_hash": "a0a89a0b5e343cf2adc7a7b5649dc359"
   },
   "src/services/dataContext.jsx": {
     "mtime": 1790195122.6592448,
@@ -45,9 +45,9 @@
     "semantic_hash": "8ac9d936b26c20ce5fa1ee33da7e7990"
   },
   "src/services/sheetsClient.js": {
-    "mtime": 1790195078.24035,
-    "ast_hash": "bf2b00339a525435966d2aa4523415cc",
-    "semantic_hash": "bf2b00339a525435966d2aa4523415cc"
+    "mtime": 1790198146.4419708,
+    "ast_hash": "2e4f30e745b95623000f5225612048a6",
+    "semantic_hash": "2e4f30e745b95623000f5225612048a6"
   },
   "src/services/sheetsParser.js": {
     "mtime": 1790195111.3865275,
@@ -133,5 +133,10 @@
     "mtime": 1790196724.183295,
     "ast_hash": "95cc60180bf6f6bbd7dc595e46ad4475",
     "semantic_hash": "95cc60180bf6f6bbd7dc595e46ad4475"
+  },
+  "src/services/snapshotData.json": {
+    "mtime": 1790198132.8339443,
+    "ast_hash": "0ad51b9b707792274192d25f28d7d01b",
+    "semantic_hash": "0ad51b9b707792274192d25f28d7d01b"
   }
 }
