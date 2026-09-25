@@ -25,9 +25,9 @@
     "semantic_hash": ""
   },
   "src/components/MetricCard.jsx": {
-    "mtime": 1790195760.0736134,
-    "ast_hash": "8d7e1dbd79aeb1a557483999e4bf06a4",
-    "semantic_hash": "8d7e1dbd79aeb1a557483999e4bf06a4"
+    "mtime": 1790372246.8710654,
+    "ast_hash": "ebc508e74fd65984db0910b00e3aedb7",
+    "semantic_hash": ""
   },
   "src/components/Sidebar.jsx": {
     "mtime": 1790371049.2571113,
@@ -50,9 +50,9 @@
     "semantic_hash": ""
   },
   "src/services/sheetsParser.js": {
-    "mtime": 1790195111.3865275,
-    "ast_hash": "7534c76ebb0b235a1cb5b22d95767b27",
-    "semantic_hash": "7534c76ebb0b235a1cb5b22d95767b27"
+    "mtime": 1790371851.268402,
+    "ast_hash": "5cccaf9494644201ae70a771c4948e74",
+    "semantic_hash": ""
   },
   "src/views/OverviewView.jsx": {
     "mtime": 1790371034.5201855,
@@ -190,8 +190,8 @@
     "semantic_hash": ""
   },
   "src/services/carolParser.js": {
-    "mtime": 1790370714.6283388,
-    "ast_hash": "ca5e1db11ea58c8bf1beba99257c693b",
+    "mtime": 1790372178.3131678,
+    "ast_hash": "b8205a3ab886423bcc9ff0958332e421",
     "semantic_hash": ""
   },
   "src/services/carolSnapshotData.json": {
@@ -200,8 +200,8 @@
     "semantic_hash": ""
   },
   "src/views/CarolView.jsx": {
-    "mtime": 1790370875.6763792,
-    "ast_hash": "93554ada89e7afeaebfa7ae9f68c1fcf",
+    "mtime": 1790372339.0748565,
+    "ast_hash": "0c1473815a278cd28c0e47b945757386",
     "semantic_hash": ""
   },
   "src/views/LauraView.jsx": {

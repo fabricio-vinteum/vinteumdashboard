@@ -7,10 +7,37 @@ export function cleanNumber(val) {
   if (!str || str === '#N/A' || str === '#REF!' || str === '#DIV/0!' || str === '-') return 0;
 
   const isNegative = str.startsWith('-') || (str.startsWith('(') && str.endsWith(')'));
-  str = str.replace(/[^0-9.]/g, '');
+
+  // Remover símbolos de moeda, porcentagem e parênteses
+  str = str.replace(/[$R%\s()]/g, '');
+
+  if (str.includes(',') && str.includes('.')) {
+    if (str.lastIndexOf(',') > str.lastIndexOf('.')) {
+      // Formato brasileiro: 1.234,56
+      str = str.replace(/\./g, '').replace(',', '.');
+    } else {
+      // Formato americano: 1,234.56
+      str = str.replace(/,/g, '');
+    }
+  } else if (str.includes(',')) {
+    // Se a vírgula é seguida por 1 ou 2 dígitos (ex: "100,0", "88,9", "50,0", "2,0"), é vírgula decimal
+    if (/,\d{1,2}$/.test(str)) {
+      str = str.replace(',', '.');
+    } else {
+      // Caso contrário, é separador de milhar americano: 113,125
+      str = str.replace(/,/g, '');
+    }
+  } else if (str.includes('.')) {
+    // Se for formato de milhar brasileiro: 5.040, 2.400, 1.260 (ponto seguido de exatamente 3 dígitos)
+    if (/^\d{1,3}\.\d{3}$/.test(str)) {
+      str = str.replace(/\./g, '');
+    }
+  }
+
+  str = str.replace(/[^0-9.-]/g, '');
   const num = parseFloat(str);
   if (isNaN(num)) return 0;
-  return isNegative ? -num : num;
+  return isNegative ? -Math.abs(num) : num;
 }
 
 export function cleanPercent(val) {

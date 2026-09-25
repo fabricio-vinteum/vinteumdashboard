@@ -10,9 +10,9 @@
     "semantic_hash": "1b73808aee88ba0597b2241a82cbaa0e"
   },
   "src/App.jsx": {
-    "mtime": 1790198182.2003002,
-    "ast_hash": "432643a2bf9d47413cef2a47a43a26a1",
-    "semantic_hash": "432643a2bf9d47413cef2a47a43a26a1"
+    "mtime": 1790370832.831658,
+    "ast_hash": "857b24e2c8b2aebca0adb73cef723850",
+    "semantic_hash": ""
   },
   "src/components/FunnelChart.jsx": {
     "mtime": 1790194124.720129,
@@ -20,9 +20,9 @@
     "semantic_hash": "d3ad6ecb4984716c9eb4968e27733e3d"
   },
   "src/components/Header.jsx": {
-    "mtime": 1790196487.0393589,
-    "ast_hash": "b869da12f785d0e0ec52a46a9f349920",
-    "semantic_hash": "b869da12f785d0e0ec52a46a9f349920"
+    "mtime": 1790370973.9593627,
+    "ast_hash": "06a41d2b3679b4abd88cf4ca8100f46d",
+    "semantic_hash": ""
   },
   "src/components/MetricCard.jsx": {
     "mtime": 1790195760.0736134,
@@ -30,9 +30,9 @@
     "semantic_hash": "8d7e1dbd79aeb1a557483999e4bf06a4"
   },
   "src/components/Sidebar.jsx": {
-    "mtime": 1790196495.501557,
-    "ast_hash": "53ab7005d9154406f8b5cb7f882797cc",
-    "semantic_hash": "53ab7005d9154406f8b5cb7f882797cc"
+    "mtime": 1790371049.2571113,
+    "ast_hash": "de849a892424074551c93a0d1d050a7c",
+    "semantic_hash": ""
   },
   "src/main.jsx": {
     "mtime": 1790198157.5148673,
@@ -40,14 +40,14 @@
     "semantic_hash": "a0a89a0b5e343cf2adc7a7b5649dc359"
   },
   "src/services/dataContext.jsx": {
-    "mtime": 1790195122.6592448,
-    "ast_hash": "8ac9d936b26c20ce5fa1ee33da7e7990",
-    "semantic_hash": "8ac9d936b26c20ce5fa1ee33da7e7990"
+    "mtime": 1790370753.3245406,
+    "ast_hash": "38575dd339c529caf34fbb5fca6f4d88",
+    "semantic_hash": ""
   },
   "src/services/sheetsClient.js": {
-    "mtime": 1790198598.0504947,
-    "ast_hash": "835dd4771cdb81fe3ca81566a54075a3",
-    "semantic_hash": "835dd4771cdb81fe3ca81566a54075a3"
+    "mtime": 1790370738.6313393,
+    "ast_hash": "8f10179fde881eed43d9047caab69641",
+    "semantic_hash": ""
   },
   "src/services/sheetsParser.js": {
     "mtime": 1790195111.3865275,
@@ -55,9 +55,9 @@
     "semantic_hash": "7534c76ebb0b235a1cb5b22d95767b27"
   },
   "src/views/OverviewView.jsx": {
-    "mtime": 1790195378.212848,
-    "ast_hash": "541c339f0831fcd14f38a7b7f0039aaf",
-    "semantic_hash": "541c339f0831fcd14f38a7b7f0039aaf"
+    "mtime": 1790371034.5201855,
+    "ast_hash": "cae7cdb102844f54160b6ac17aaf7ce0",
+    "semantic_hash": ""
   },
   "vite.config.js": {
     "mtime": 1790196453.793862,
@@ -187,6 +187,26 @@
   "src/assets/vite.svg": {
     "mtime": 1790193937.9383943,
     "ast_hash": "9960a24288958394ac50e57ff638b036",
+    "semantic_hash": ""
+  },
+  "src/services/carolParser.js": {
+    "mtime": 1790370714.6283388,
+    "ast_hash": "ca5e1db11ea58c8bf1beba99257c693b",
+    "semantic_hash": ""
+  },
+  "src/services/carolSnapshotData.json": {
+    "mtime": 1790370688.3120017,
+    "ast_hash": "e675b8505aea59bb028a5ea34d161f68",
+    "semantic_hash": ""
+  },
+  "src/views/CarolView.jsx": {
+    "mtime": 1790370875.6763792,
+    "ast_hash": "93554ada89e7afeaebfa7ae9f68c1fcf",
+    "semantic_hash": ""
+  },
+  "src/views/LauraView.jsx": {
+    "mtime": 1790370889.78648,
+    "ast_hash": "b5039e61e04bfbd58b216954a4e17c7d",
     "semantic_hash": ""
   }
 }

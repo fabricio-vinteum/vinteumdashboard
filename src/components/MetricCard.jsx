@@ -10,29 +10,33 @@ export default function MetricCard({
   icon: Icon,
   accentColor = 'indigo', // emerald, blue, indigo, amber, rose, purple
   isInverse = false, // for Churn where lower is better
+  isPositive: customIsPositive,
 }) {
   // Determine status color based on percentage
   const numPct = typeof percentage === 'number' ? percentage : parseFloat(percentage) || 0;
   
-  let badgeType = 'badge-emerald';
-  let isPositive = numPct >= 100;
+  let isPositive = customIsPositive !== undefined 
+    ? customIsPositive 
+    : (isInverse ? numPct <= 100 : numPct >= 100);
 
+  let badgeType = 'badge-emerald';
   if (isInverse) {
     if (numPct > 100) {
       badgeType = 'badge-rose';
-      isPositive = false;
     } else if (numPct > 80) {
       badgeType = 'badge-amber';
-      isPositive = true;
     } else {
       badgeType = 'badge-emerald';
-      isPositive = true;
     }
   } else {
-    if (numPct >= 90) badgeType = 'badge-emerald';
-    else if (numPct >= 50) badgeType = 'badge-blue';
-    else if (numPct >= 25) badgeType = 'badge-amber';
-    else badgeType = 'badge-rose';
+    if (customIsPositive !== undefined) {
+      badgeType = customIsPositive ? 'badge-emerald' : 'badge-rose';
+    } else {
+      if (numPct >= 90) badgeType = 'badge-emerald';
+      else if (numPct >= 50) badgeType = 'badge-blue';
+      else if (numPct >= 25) badgeType = 'badge-amber';
+      else badgeType = 'badge-rose';
+    }
   }
   const colorMap = {
     orange: {
@@ -150,7 +154,12 @@ export default function MetricCard({
           color: 'var(--text-muted)',
           marginBottom: '0.35rem'
         }}>
-          <span>{goal ? `Meta: ${goal}` : 'Progresso da Meta'}</span>
+          <span>{(() => {
+            if (!goal) return 'Progresso da Meta';
+            const clean = String(goal).replace(/^(meta:\s*)+/i, '').trim();
+            if (clean === '—' || clean === '-') return '—';
+            return clean.toLowerCase().includes('meta') ? clean : `Meta: ${clean}`;
+          })()}</span>
           <span>{numPct.toFixed(0)}%</span>
         </div>
         <div style={{

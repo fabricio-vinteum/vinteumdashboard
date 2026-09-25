@@ -1,4 +1,4 @@
-import { cleanNumber, cleanPercent, formatNumber, formatPercent } from './sheetsParser';
+import { cleanNumber, cleanPercent, formatNumber, formatPercent } from './sheetsParser.js';
 
 export const CAROL_MONTHS_MAP = {
   January: { pt: 'Janeiro', short: 'Jan', quarter: 'Q1', isBeforeHiring: true },

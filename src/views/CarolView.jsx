@@ -34,6 +34,15 @@ export default function CarolView() {
   const doneRate = currentConversions['Done/Sched.'] || { achievedPct: 0, achievedStr: '0,0%', goalStr: '50,0%' };
   const touchesRate = currentConversions['Sched./Touches'] || { achievedPct: 0, achievedStr: '0,0%', goalStr: '2,0%' };
 
+  // Taxa de comparecimento (Demos Feitas / Demos Agendadas)
+  const comparecimentoTaxa = sched.achieved > 0
+    ? Number(((done.achieved / sched.achieved) * 100).toFixed(1))
+    : Number(doneRate.achievedPct || 0);
+
+  const formattedComparecimento = comparecimentoTaxa % 1 === 0 
+    ? `${comparecimentoTaxa.toFixed(0)}%` 
+    : `${comparecimentoTaxa.toFixed(1)}%`;
+
   const emails = currentMetricsObj['E-mails'] || { achieved: 0, goal: 420, pct: 0, goalStr: '420', achievedStr: '0' };
   const calls = currentMetricsObj['Calls'] || { achieved: 0, goal: 200, pct: 0, goalStr: '200', achievedStr: '0' };
   const sms = currentMetricsObj['SMS'] || { achieved: 0, goal: 200, pct: 0, goalStr: '200', achievedStr: '0' };
@@ -118,13 +127,18 @@ export default function CarolView() {
   };
 
   // Gráfico 2: Taxa de Comparecimento / Conversão (Done/Sched)
+  const augRate = carolData?.monthlyData?.August?.conversions?.['Done/Sched.']?.achievedPct ?? 100.0;
+  const sepRate = carolData?.monthlyData?.September?.conversions?.['Done/Sched.']?.achievedPct ?? 85.7;
+  const octRate = carolData?.monthlyData?.October?.conversions?.['Done/Sched.']?.achievedPct ?? 0.0;
+  const q3Rate = carolData?.periods?.Q3?.conversions?.['Done/Sched.']?.achievedPct ?? 88.9;
+
   const conversionChartData = {
     labels: ['Agosto', 'Setembro', 'Outubro', 'Média Total Q3'],
     datasets: [
       {
         type: 'bar',
         label: 'Taxa Realizada (%)',
-        data: [100.0, 85.7, 0.0, 88.9],
+        data: [augRate, sepRate, octRate, q3Rate],
         backgroundColor: [
           'rgba(16, 185, 129, 0.9)',
           'rgba(52, 211, 153, 0.85)',
@@ -304,9 +318,15 @@ export default function CarolView() {
         <MetricCard
           title="Demos Agendadas"
           value={`${sched.achieved} agend.`}
-          goal={isBeforeHiring ? '—' : `Meta: ${sched.goal}`}
+          goal={isBeforeHiring ? '—' : `${sched.goal}`}
           percentage={isBeforeHiring ? 0 : sched.pct}
-          subtitle={isCumulative ? 'Total desde entrada (Ago-Out)' : 'Agendamentos no período'}
+          subtitle={
+            isCumulative
+              ? 'Total acumulado (Agosto a Outubro)'
+              : carolSelectedPeriod === 'Q3'
+              ? '9 agendadas no Q3 (Agosto e Setembro)'
+              : 'Agendamentos no período'
+          }
           icon={CalendarCheck}
           accentColor="blue"
         />
@@ -315,9 +335,15 @@ export default function CarolView() {
         <MetricCard
           title="Demos Realizadas"
           value={`${done.achieved} feitas`}
-          goal={isBeforeHiring ? '—' : `Meta: ${done.goal}`}
+          goal={isBeforeHiring ? '—' : `${done.goal}`}
           percentage={isBeforeHiring ? 0 : done.pct}
-          subtitle={isCumulative ? '8 demos realizadas em Q3' : 'Conclusão de reuniões'}
+          subtitle={
+            isCumulative
+              ? 'Total de reuniões concluídas'
+              : carolSelectedPeriod === 'Q3'
+              ? '8 reuniões realizadas no Q3'
+              : 'Conclusão de reuniões no mês'
+          }
           icon={CheckCircle2}
           accentColor="emerald"
         />
@@ -325,21 +351,35 @@ export default function CarolView() {
         {/* Taxa de Comparecimento / Conversão */}
         <MetricCard
           title="Taxa de Comparecimento"
-          value={isBeforeHiring ? '—' : `${doneRate.achievedPct || doneRate.achievedStr}`}
-          goal={isBeforeHiring ? '—' : `Meta: ${doneRate.goalStr || '50,0%'}`}
-          percentage={doneRate.achievedPct}
-          subtitle={doneRate.achievedPct >= 50 ? '🔥 Superando a meta de 50%!' : 'Abaixo da meta'}
+          value={isBeforeHiring ? '—' : formattedComparecimento}
+          goal={isBeforeHiring ? '—' : '50%'}
+          percentage={comparecimentoTaxa}
+          isPositive={isBeforeHiring ? false : comparecimentoTaxa >= 50}
+          subtitle={
+            isBeforeHiring
+              ? 'Não aplicável'
+              : comparecimentoTaxa >= 50
+              ? '🔥 Superando a meta de 50%!'
+              : 'Abaixo da meta de 50%'
+          }
           icon={TrendingUp}
-          accentColor={doneRate.achievedPct >= 50 ? 'emerald' : 'amber'}
+          accentColor={comparecimentoTaxa >= 50 ? 'emerald' : 'amber'}
         />
 
-        {/* Destaque / Conquistas */}
+        {/* Eficiência de Conversão */}
         <MetricCard
           title="Eficiência de Conversão"
           value={isBeforeHiring ? '—' : `${done.achieved} / ${sched.achieved}`}
-          goal="Demos Realiz./Agend."
-          percentage={doneRate.achievedPct}
-          subtitle={done.achieved > 0 ? '80.0% das reuniões realizadas' : 'Aguardando reuniões'}
+          goal={isBeforeHiring ? '—' : '50% meta'}
+          percentage={comparecimentoTaxa}
+          isPositive={isBeforeHiring ? false : comparecimentoTaxa >= 50}
+          subtitle={
+            isBeforeHiring
+              ? 'Não aplicável'
+              : sched.achieved > 0
+              ? `${formattedComparecimento} das reuniões realizadas`
+              : 'Sem agendamentos no período'
+          }
           icon={Award}
           accentColor="purple"
         />
