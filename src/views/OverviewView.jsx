@@ -6,16 +6,11 @@ import ComparisonSection from '../components/ComparisonSection';
 import { 
   DollarSign, 
   ShoppingBag, 
-  Users, 
   TrendingUp, 
   UserMinus, 
-  Award,
-  Calendar,
-  Briefcase,
-  ShieldCheck,
-  Scale
+  ArrowRight
 } from 'lucide-react';
-import { formatCurrency, formatNumber, formatPercent } from '../services/sheetsParser';
+import { formatCurrency, formatNumber } from '../services/sheetsParser';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -43,7 +38,7 @@ ChartJS.register(
 );
 
 export default function OverviewView() {
-  const { currentMetrics, selectedPeriodLabel, selectedPeriod, dashboardData } = useData();
+  const { currentMetrics, selectedPeriodLabel, selectedPeriod, dashboardData, setActiveView } = useData();
 
   // Metrics from current selected period
   const mrr = currentMetrics['MRR'] || { achieved: 0, goal: 0, pct: 0 };
@@ -55,13 +50,10 @@ export default function OverviewView() {
   const demos = currentMetrics['Demos / Opp'] || { achieved: 0, goal: 0, pct: 0 };
   const churns = currentMetrics['Churns'] || { achieved: 0, goal: 3, pct: 0 };
   const churnedMrr = currentMetrics['Churned MRR'] || { achieved: 0, goal: 0, pct: 0 };
-  const churnRate = currentMetrics['% churn'] || { achieved: 0, goal: 1.30, pct: 0 };
   const netGrowth = currentMetrics['Net growth'] || { achieved: 0, goal: 0, pct: 0 };
   const mrrNetGrowth = currentMetrics['MRR net growth'] || { achieved: 0, goal: 0, pct: 0 };
   const hubspot = currentMetrics['Deals last day - HubSpot'] || { achieved: 0, goal: 0, pct: 0 };
   const ratio = currentMetrics['Ratio'] || { achieved: 0, goal: 3.0, pct: 0 };
-  const laura = currentMetrics["Laura's Sales"] || { achieved: 0, goal: 0, pct: 0 };
-  const katie = currentMetrics["Katie's Sales"] || { achieved: 0, goal: 0, pct: 0 };
 
   // Funnel data
   const funnel = {
@@ -160,6 +152,59 @@ export default function OverviewView() {
             HubSpot Deals: <strong>{hubspot.achieved || '139'}</strong>
           </span>
         </div>
+      </div>
+
+      {/* SDR Live Highlight Banner */}
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        padding: '0.85rem 1.25rem',
+        borderRadius: 'var(--radius-md)',
+        background: 'linear-gradient(90deg, rgba(240, 112, 16, 0.14), rgba(21, 13, 67, 0.7))',
+        border: '1px solid rgba(240, 112, 16, 0.35)',
+        flexWrap: 'wrap',
+        gap: '0.75rem',
+        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)'
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+          <div style={{
+            width: '34px',
+            height: '34px',
+            borderRadius: '50%',
+            background: 'linear-gradient(135deg, var(--vinteum-orange), #ff8c33)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontSize: '0.85rem',
+            fontWeight: 800,
+            color: '#ffffff'
+          }}>
+            C
+          </div>
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <span style={{ fontSize: '0.85rem', fontWeight: 700, color: '#ffffff' }}>
+                Dashboard da Carol Liberado
+              </span>
+              <span className="badge badge-emerald" style={{ fontSize: '0.68rem' }}>
+                Q3 em Diante
+              </span>
+            </div>
+            <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', display: 'block', marginTop: '1px' }}>
+              Carol entrou em Agosto · 10 agendamentos, 8 demos realizadas (80.0% de comparecimento) · Laura aguardando planilha
+            </span>
+          </div>
+        </div>
+
+        <button
+          onClick={() => setActiveView('carol')}
+          className="btn btn-primary"
+          style={{ padding: '0.45rem 0.95rem', fontSize: '0.78rem' }}
+        >
+          <span>Abrir Dash da Carol</span>
+          <ArrowRight size={14} />
+        </button>
       </div>
 
       {/* Primary KPI Grid */}

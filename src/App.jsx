@@ -7,6 +7,8 @@ import FunnelView from './views/FunnelView';
 import RevenueView from './views/RevenueView';
 import RetentionView from './views/RetentionView';
 import MatrixView from './views/MatrixView';
+import CarolView from './views/CarolView';
+import LauraView from './views/LauraView';
 import LoginModal from './components/LoginModal';
 import { isUserAuthenticated, logoutUser } from './services/authService';
 import { Activity } from 'lucide-react';
@@ -110,6 +112,10 @@ function DashboardContent({ onLogout }) {
         return <RetentionView />;
       case 'matrix':
         return <MatrixView />;
+      case 'carol':
+        return <CarolView />;
+      case 'laura':
+        return <LauraView />;
       default:
         return <OverviewView />;
     }

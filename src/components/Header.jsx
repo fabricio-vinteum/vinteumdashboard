@@ -4,13 +4,10 @@ import {
   RefreshCw, 
   ExternalLink, 
   Clock, 
-  Activity, 
   CalendarDays,
-  Sparkles,
-  LogOut,
-  User
+  LogOut
 } from 'lucide-react';
-import { SHEET_ID, DASHBOARD_GID } from '../services/sheetsClient';
+import { SHEET_ID, DASHBOARD_GID, CAROL_SHEET_ID } from '../services/sheetsClient';
 import { getAuthenticatedUser } from '../services/authService';
 
 export default function Header({ onLogout }) {
@@ -22,8 +19,10 @@ export default function Header({ onLogout }) {
     setSyncInterval,
     selectedPeriod,
     setSelectedPeriod,
-    selectedPeriodLabel,
+    activeView,
     dashboardData,
+    carolSelectedPeriod,
+    setCarolSelectedPeriod,
   } = useData();
 
   const [timeAgo, setTimeAgo] = useState('agora');
@@ -41,6 +40,9 @@ export default function Header({ onLogout }) {
   }, [lastUpdated]);
 
   const { monthsList, quartersList } = dashboardData;
+
+  const isCarolView = activeView === 'carol';
+  const isLauraView = activeView === 'laura';
 
   return (
     <header className="glass-card" style={{
@@ -66,24 +68,40 @@ export default function Header({ onLogout }) {
           justifyContent: 'center',
           boxShadow: '0 4px 18px rgba(240, 112, 16, 0.4)'
         }}>
-          <img 
-            src={`${import.meta.env.BASE_URL}vinteum-logo.svg`}
-            alt="Vinteum Icon" 
-            style={{ width: '26px', height: '26px', filter: 'brightness(0) invert(1)' }} 
-          />
+          {isCarolView ? (
+            <span style={{ fontSize: '1.2rem', fontWeight: 800, color: '#ffffff', fontFamily: 'var(--font-display)' }}>C</span>
+          ) : isLauraView ? (
+            <span style={{ fontSize: '1.2rem', fontWeight: 800, color: '#ffffff', fontFamily: 'var(--font-display)' }}>L</span>
+          ) : (
+            <img 
+              src={`${import.meta.env.BASE_URL}vinteum-logo.svg`}
+              alt="Vinteum Icon" 
+              style={{ width: '26px', height: '26px', filter: 'brightness(0) invert(1)' }} 
+            />
+          )}
         </div>
         <div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
             <h1 style={{ fontSize: '1.35rem', color: '#ffffff', letterSpacing: '-0.02em', fontFamily: 'var(--font-display)' }}>
-              Vinteum Executive Dashboard
+              {isCarolView 
+                ? 'Carol · SDR Outbound' 
+                : isLauraView 
+                ? 'Laura · SDR Comercial' 
+                : 'Vinteum Executive Dashboard'}
             </h1>
-            <span className="badge badge-emerald" style={{ fontSize: '0.7rem' }}>
+            <span className={isLauraView ? 'badge badge-amber' : 'badge badge-emerald'} style={{ fontSize: '0.7rem' }}>
               <span className={refreshing ? 'live-dot-updating' : 'live-dot'} />
-              {refreshing ? 'Sincronizando...' : 'Ao Vivo'}
+              {isLauraView ? 'Em Espera' : refreshing ? 'Sincronizando...' : 'Ao Vivo'}
             </span>
           </div>
           <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '2px' }}>
-            Planilha Oficial <strong style={{ color: 'var(--vinteum-orange-light)' }}>'Dashboard'</strong> · Atualizado {timeAgo}
+            {isCarolView ? (
+              <>Planilha Individual <strong style={{ color: 'var(--vinteum-orange-light)' }}>'Carol - Metas'</strong> (Contagem a partir do Q3) · Atualizado {timeAgo}</>
+            ) : isLauraView ? (
+              <>Aguardando disponibilização da planilha individual de metas</>
+            ) : (
+              <>Planilha Oficial <strong style={{ color: 'var(--vinteum-orange-light)' }}>'Dashboard'</strong> · Atualizado {timeAgo}</>
+            )}
           </p>
         </div>
       </div>
@@ -92,58 +110,101 @@ export default function Header({ onLogout }) {
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
         
         {/* Period Selector Dropdown */}
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '0.6rem',
-          background: 'rgba(255, 255, 255, 0.05)',
-          border: '1px solid rgba(240, 112, 16, 0.4)',
-          borderRadius: 'var(--radius-md)',
-          padding: '0.45rem 0.85rem',
-          boxShadow: '0 2px 10px rgba(0,0,0,0.25)'
-        }}>
-          <CalendarDays size={16} color="var(--vinteum-orange)" />
-          <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>Período:</span>
-          
-          <select 
-            value={selectedPeriod}
-            onChange={(e) => setSelectedPeriod(e.target.value)}
-            style={{
-              background: 'transparent',
-              border: 'none',
-              color: '#ffffff',
-              fontFamily: 'var(--font-display)',
-              fontWeight: 700,
-              fontSize: '0.9rem',
-              outline: 'none',
-              cursor: 'pointer',
-              minWidth: '220px'
-            }}
-          >
-            {/* Option 1: Ano Todo até a data vigente */}
-            <option value="YTD" style={{ background: '#150D43', fontWeight: 'bold', color: 'var(--vinteum-orange-light)' }}>
-              🌟 Ano Todo (Até a data vigente)
-            </option>
-
-            {/* Quarters Group */}
-            <optgroup label="── TRIMESTRES ──" style={{ background: '#150D43', color: '#8b85ad' }}>
-              {quartersList.map(q => (
-                <option key={q} value={q} style={{ background: '#150D43', color: '#ffffff' }}>
-                  📊 Total {q}
+        {!isLauraView && (
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.6rem',
+            background: 'rgba(255, 255, 255, 0.05)',
+            border: '1px solid rgba(240, 112, 16, 0.4)',
+            borderRadius: 'var(--radius-md)',
+            padding: '0.45rem 0.85rem',
+            boxShadow: '0 2px 10px rgba(0,0,0,0.25)'
+          }}>
+            <CalendarDays size={16} color="var(--vinteum-orange)" />
+            <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>Período:</span>
+            
+            {isCarolView ? (
+              <select 
+                value={carolSelectedPeriod}
+                onChange={(e) => setCarolSelectedPeriod(e.target.value)}
+                style={{
+                  background: 'transparent',
+                  border: 'none',
+                  color: '#ffffff',
+                  fontFamily: 'var(--font-display)',
+                  fontWeight: 700,
+                  fontSize: '0.9rem',
+                  outline: 'none',
+                  cursor: 'pointer',
+                  minWidth: '220px'
+                }}
+              >
+                <option value="Q3_PLUS" style={{ background: '#150D43', fontWeight: 'bold', color: 'var(--vinteum-orange-light)' }}>
+                  ⭐ Acumulado Ativo (Desde Q3 / Agosto)
                 </option>
-              ))}
-            </optgroup>
-
-            {/* Months Group (Auto-populated from sheet) */}
-            <optgroup label="── MESES (PLANILHA) ──" style={{ background: '#150D43', color: '#8b85ad' }}>
-              {monthsList.map(m => (
-                <option key={m.id} value={m.id} style={{ background: '#150D43', color: m.hasData ? '#ffffff' : '#64748b' }}>
-                  {m.hasData ? '● ' : '○ '} {m.name} ({m.quarter}) {m.hasData ? '' : '— Sem dados'}
+                <optgroup label="── TRIMESTRES (CAROL) ──" style={{ background: '#150D43', color: '#8b85ad' }}>
+                  <option value="Q3" style={{ background: '#150D43', color: '#ffffff' }}>
+                    📊 Total Q3 (Jul-Set)
+                  </option>
+                  <option value="Q4" style={{ background: '#150D43', color: '#ffffff' }}>
+                    📊 Total Q4 (Out-Dez)
+                  </option>
+                </optgroup>
+                <optgroup label="── MESES ATIVOS ──" style={{ background: '#150D43', color: '#8b85ad' }}>
+                  <option value="August" style={{ background: '#150D43', color: '#ffffff' }}>
+                    ● Agosto (Mês de Estreia)
+                  </option>
+                  <option value="September" style={{ background: '#150D43', color: '#ffffff' }}>
+                    ● Setembro
+                  </option>
+                  <option value="October" style={{ background: '#150D43', color: '#ffffff' }}>
+                    ● Outubro
+                  </option>
+                </optgroup>
+              </select>
+            ) : (
+              <select 
+                value={selectedPeriod}
+                onChange={(e) => setSelectedPeriod(e.target.value)}
+                style={{
+                  background: 'transparent',
+                  border: 'none',
+                  color: '#ffffff',
+                  fontFamily: 'var(--font-display)',
+                  fontWeight: 700,
+                  fontSize: '0.9rem',
+                  outline: 'none',
+                  cursor: 'pointer',
+                  minWidth: '220px'
+                }}
+              >
+                {/* Option 1: Ano Todo até a data vigente */}
+                <option value="YTD" style={{ background: '#150D43', fontWeight: 'bold', color: 'var(--vinteum-orange-light)' }}>
+                  🌟 Ano Todo (Até a data vigente)
                 </option>
-              ))}
-            </optgroup>
-          </select>
-        </div>
+
+                {/* Quarters Group */}
+                <optgroup label="── TRIMESTRES ──" style={{ background: '#150D43', color: '#8b85ad' }}>
+                  {quartersList.map(q => (
+                    <option key={q} value={q} style={{ background: '#150D43', color: '#ffffff' }}>
+                      📊 Total {q}
+                    </option>
+                  ))}
+                </optgroup>
+
+                {/* Months Group (Auto-populated from sheet) */}
+                <optgroup label="── MESES (PLANILHA) ──" style={{ background: '#150D43', color: '#8b85ad' }}>
+                  {monthsList.map(m => (
+                    <option key={m.id} value={m.id} style={{ background: '#150D43', color: m.hasData ? '#ffffff' : '#64748b' }}>
+                      {m.hasData ? '● ' : '○ '} {m.name} ({m.quarter}) {m.hasData ? '' : '— Sem dados'}
+                    </option>
+                  ))}
+                </optgroup>
+              </select>
+            )}
+          </div>
+        )}
 
         {/* Auto-sync Interval */}
         <div style={{
@@ -191,15 +252,17 @@ export default function Header({ onLogout }) {
 
         {/* Open Sheet Link */}
         <a 
-          href={`https://docs.google.com/spreadsheets/d/${SHEET_ID}/edit#gid=${DASHBOARD_GID}`}
+          href={isCarolView 
+            ? `https://docs.google.com/spreadsheets/d/${CAROL_SHEET_ID}/edit#gid=0` 
+            : `https://docs.google.com/spreadsheets/d/${SHEET_ID}/edit#gid=${DASHBOARD_GID}`}
           target="_blank" 
           rel="noreferrer"
           className="btn btn-secondary"
-          title="Abrir aba 'Dashboard' no Google Sheets"
+          title={isCarolView ? "Abrir planilha de metas da Carol no Google Sheets" : "Abrir aba 'Dashboard' no Google Sheets"}
           style={{ padding: '0.55rem 0.85rem' }}
         >
           <ExternalLink size={15} />
-          <span>Planilha</span>
+          <span>{isCarolView ? 'Planilha Carol' : 'Planilha'}</span>
         </a>
 
         {/* User Badge & Logout Button */}

@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useEffect, useCallback, useMemo } from 'react';
-import { fetchDashboardCsv } from './sheetsClient';
+import { fetchDashboardCsv, fetchCarolCsv } from './sheetsClient';
 import { parseDashboardSheet, MONTH_NAMES_MAP } from './sheetsParser';
+import { parseCarolSheet, CAROL_MONTHS_MAP } from './carolParser';
 
 const DataContext = createContext(null);
 
@@ -14,8 +15,11 @@ export function DataProvider({ children }) {
   // Selected period: 'YTD' (Ano Todo), 'Q1', 'Q2', 'Q3', 'Q4', or specific month 'January', 'September', etc.
   const [selectedPeriod, setSelectedPeriod] = useState('YTD');
   
-  // Active navigation view: 'overview', 'funnel', 'revenue', 'retention', 'matrix'
+  // Active navigation view: 'overview', 'funnel', 'revenue', 'retention', 'matrix', 'carol', 'laura'
   const [activeView, setActiveView] = useState('overview');
+
+  // Carol's selected period: 'Q3_PLUS' (Acumulado a partir do Q3), 'Q3', 'August', 'September', 'Q4', 'October'
+  const [carolSelectedPeriod, setCarolSelectedPeriod] = useState('Q3_PLUS');
 
   // Parsed dataset from Dashboard tab
   const [dashboardData, setDashboardData] = useState({
@@ -27,16 +31,34 @@ export function DataProvider({ children }) {
     rawMatrix: [],
   });
 
+  // Parsed dataset from Carol's SDR sheet
+  const [carolData, setCarolData] = useState({
+    periods: {},
+    monthlyData: {},
+    cumulativeQ3Plus: null,
+    monthlyHistory: [],
+    rawRows: [],
+    hiredInfo: { month: 'August', quarter: 'Q3', year: 2026 },
+  });
+
   const loadData = useCallback(async (isManual = false) => {
     if (isManual) setRefreshing(true);
     try {
-      const rawRows = await fetchDashboardCsv();
-      const parsed = parseDashboardSheet(rawRows);
-      setDashboardData(parsed);
+      const [rawRows, rawCarolRows] = await Promise.all([
+        fetchDashboardCsv(),
+        fetchCarolCsv(),
+      ]);
+
+      const parsedDashboard = parseDashboardSheet(rawRows);
+      setDashboardData(parsedDashboard);
+
+      const parsedCarol = parseCarolSheet(rawCarolRows);
+      setCarolData(parsedCarol);
+
       setLastUpdated(new Date());
       setStatus('connected');
     } catch (err) {
-      console.error('Erro ao sincronizar planilha Dashboard:', err);
+      console.error('Erro ao sincronizar planilhas:', err);
       setStatus('error');
     } finally {
       setLoading(false);
@@ -58,7 +80,7 @@ export function DataProvider({ children }) {
     return () => clearInterval(timer);
   }, [syncInterval, loadData]);
 
-  // Derived current metrics for the selected period
+  // Derived current metrics for the selected period in general dashboard
   const currentMetrics = useMemo(() => {
     return dashboardData.periods[selectedPeriod] || dashboardData.periods['YTD'] || {};
   }, [dashboardData, selectedPeriod]);
@@ -78,6 +100,32 @@ export function DataProvider({ children }) {
     return selectedPeriod;
   }, [selectedPeriod, dashboardData.latestActiveMonth]);
 
+  // Derived current metrics for Carol based on carolSelectedPeriod
+  const carolCurrentMetrics = useMemo(() => {
+    if (!carolData) return null;
+    if (carolSelectedPeriod === 'Q3_PLUS') {
+      return carolData.cumulativeQ3Plus;
+    }
+    if (carolSelectedPeriod.startsWith('Q')) {
+      return carolData.periods[carolSelectedPeriod] || null;
+    }
+    return carolData.monthlyData[carolSelectedPeriod] || null;
+  }, [carolData, carolSelectedPeriod]);
+
+  // Label for Carol's selected period
+  const carolPeriodLabel = useMemo(() => {
+    if (carolSelectedPeriod === 'Q3_PLUS') {
+      return 'Acumulado Ativo (Desde Q3 / Agosto)';
+    }
+    if (carolSelectedPeriod.startsWith('Q')) {
+      return `Total ${carolSelectedPeriod}`;
+    }
+    if (CAROL_MONTHS_MAP[carolSelectedPeriod]) {
+      return `${CAROL_MONTHS_MAP[carolSelectedPeriod].pt} (${CAROL_MONTHS_MAP[carolSelectedPeriod].quarter})`;
+    }
+    return carolSelectedPeriod;
+  }, [carolSelectedPeriod]);
+
   return (
     <DataContext.Provider
       value={{
@@ -94,6 +142,11 @@ export function DataProvider({ children }) {
         setActiveView,
         dashboardData,
         currentMetrics,
+        carolData,
+        carolSelectedPeriod,
+        setCarolSelectedPeriod,
+        carolCurrentMetrics,
+        carolPeriodLabel,
         refreshNow: () => loadData(true),
       }}
     >
